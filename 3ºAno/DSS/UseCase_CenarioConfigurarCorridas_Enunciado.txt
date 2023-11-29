@@ -1,0 +1,34 @@
+USE CASE: configurar Corridas 
+Descrição: Configuração das corridas no campeonato 
+Cenário: 5-Configurar Corridas 
+Pré-condição: Os jogadores estão disponiveis para começar a corrida 
+Pós-condição: Os jogadores têm o setup da corrida pronto a iniciar
+Fluxo Normal: A afinação do carro não é alterada (caso seja possível fazê-lo)
+	1. O jogador regista-se no campeonato 
+	2. O sistema apresenta o nome do circuito
+	3. O sistema apresenta a situação meteorológica para a corrida
+	4. O jogador decide não alterar a afinação do carro
+	5. O jogador escolhe quais os pneus a utilizar na corrida
+	6. O jogador escolhe qual o modo de motor a utilizar na corrida 
+	7. A corrida pode ser iniciada 
+Fluxo Alternativo: A afinação do carro é alterada(caso seja possível fazê-lo)
+	1. O jogador regista-se no campeonato 
+	2. O sistema apresenta o nome do circuito
+	3. O sistema apresenta a situação meteorológica para a corrida
+	4. O jogador decide alterar a afinação do carro
+      5. O jogador altera o PAC do carro 
+	6. O jogador escolhe quais os pneus a utilizar na corrida
+	7. O jogador escolhe qual o modo de motor a utilizar na corrida 
+	8. A corrida pode ser iniciada 
+Fluxo Alternativo: A afinação do carro não é alterada(não é possível fazê-lo)
+	1. O jogador regista-se no campeonato 
+	2. O sistema apresenta o nome do circuito
+	3. O sistema apresenta a situação meteorológica para a corrida
+	4. O jogador escolhe quais os pneus a utilizar na corrida
+	5. O jogador escolhe qual o modo de motor a utilizar na corrida 
+	6. A corrida pode ser iniciada 
+Fluxo Excepção: Registo no campeonato, quando este não existe
+	1. O jogador tenta inscrever-se no campeonato 
+	2. O sistema verifica que o campeonato não existe 
+	3. O jogador é notificado que não é possível iniciar o campeonato
+	4. Termina o processo

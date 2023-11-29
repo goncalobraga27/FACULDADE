@@ -1,0 +1,66 @@
+// Recall the hash table Alloy model,
+// now with mutable lists inside the buckets.
+
+sig Bucket {
+	var head : lone Node
+}
+sig Node {
+	key : one Key,
+	var prox : lone Node
+}
+sig Key {
+	hash : one Hash
+}
+sig Hash {}
+
+// Specify the operation of inserting a node
+// in the hash table. The node should be 
+// inserted at the head of a bucket.
+// If the operation only works well when the
+// hash of the new node does not exist in the
+// table you get Two points. If it always 
+// works well you get Five points. Use the
+// respective commands to check how many
+// points you have.
+
+pred insert[n : Node] {
+	// A inserção de um Node resume-se a dois pontos:
+  	// Se o Node n tem a mesma key.hash do bucket 
+  	// Se o Node n não tem a mesma key.hash do bucket 
+  	(all b:Bucket| b.head.key.hash != n.key.hash) implies 
+	insereNovoBucket[n]
+	else 
+	insereBucketExistente[n]
+  
+}
+
+pred insereBucketExistente[n:Node]{
+  // Guards, that specify when it can occur
+  // Quando o Node n não se encontra num bucket 
+  all b:Bucket | n not in b.head.*(prox)  
+  // Effects, that specify what changes when it occurs
+  // Colocação do n há cabeça, para o bucket com a mesma key.hash
+  // A "cauda" do n irá ter o que tinha o bucket anteriormente há cabeça 
+  // Para os outros buckets, tudo se mantem igual, antes e depois da inserção
+  (one b : Bucket | b.head.key.hash = n.key.hash and (n.prox' = b.head and b.head'= n) and (all b1: Bucket - b | b1.head'= b1.head))
+  // Frame conditions, special effects that specify what does not change when it occurs
+  // Para todos os nodos que já estão na hash table, não é alterado os prox dos mesmos 
+	(all node: Node - n | node.prox' = node.prox)
+}
+
+pred insereNovoBucket[n:Node]{
+  // Guards, that specify when it can occur
+  // Quando o Node n não se encontra em nenhum bucket
+  all b : Bucket | n not in b.head.*(prox)
+  // Effects, that specify what changes when it occurs
+  // Criação de um bucket, que irá ter há cabeça o Node n 
+  // Todos os outros buckets se mantêm iguais
+  (one nb: Bucket |no nb.head and nb.head' = n and (all ob: Bucket - nb | ob.head' = ob.head))
+  // Frame conditions, special effects that specify what does not change when it occurs
+  // Para os nodos da hashtable, nada se altera 
+  (all on : Node | on.prox' = on.prox)
+ 
+}
+
+
+LINK : http://alloy4fun.inesctec.pt/XwHmz4CNM4ExN9HHd

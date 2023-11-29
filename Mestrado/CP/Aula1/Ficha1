@@ -1,0 +1,93 @@
+Exercicio 1 -
+a)
+What is the complexity of the MM (i.e., in big O notation, where N is the problem size and NxN is the matrix size)?
+R: A complexidade da MM é cúbica, isto é devido ao facto de possuirmos 3 ciclos for aninhados uns nos outros. Assim a complexidade é de O3.
+
+What increase in execution time is expected when the N doubles?
+R: Quando o N duplica o tempo de execução vai ser 8x maior uma vez que a complexidade é 03, logo 2*2*2=8
+
+Which component of the performance equation is affected (e.g., #I, CPI or Tcc)?
+R: O Tcc é uma caracteristica do CPU da máquina, logo nunca é alterado, independentemente das circunstâncias 
+O CPI , é o número de clocks por instrução, que não varia. Não varia uma vez que são executadas sempre as mesmas instruções.
+O #I varia, uma vez que agora temos de multiplicar matrizes de maior tamanho logo os ciclos for têm um maior número de instruções para executar em cada iteração. 
+
+b)
+Can you estimate the number of instructions executedfor a NxN matrix, on each case?
+R: 
+Com o otimização O0 possuimos 50 instruções a executar 
+
+Com a otimização O2 possuimos 8 instruções a executar   
+
+What is the expected gain from the compiler optimised version?
+R: 
+O ganho entre compilação O2 e O0 é de 625%.
+
+c)
+PARA O2:
+Size: 256 -> Texe = 0,038007 +- 0,000489 ; #CC = 93 461 971 ; #I = 137 286 372 ; #I estimated = 8*256^3
+Size: 128 -> Texe = 0,004897 +- 0,000227 ; #CC = 10 275 308 ; #I = 18 247 930 ; #I estimated = 8*128^3
+Size: 512 -> Texe = 0,3169 +- 0,0197 ; #CC = 940 767 941 ; #I = 1 083 806 041 ; #I estimated = 8*512^3 ; Average CPI = 0.86956 -> Estas instruções são mais complexas do que as de O0, por isso o CPI é maior 
+PARA O0:
+Size: 512 -> Texe = 1,1819 +- 0,0270 ; #CC = 3 807 891 268; #I = 6 732 358 842; #I estimated = 50*512^3 ; Average CPI = 0.564972 -> Estas instruções são menos compelxas, logo o CPI é mais baixo 
+
+d)
+Compare the measured #I against the estimative from 1b). Comment the difference. Does it increases at the expected rate when the N value doubles?
+R:
+PARA 02:
+Size : 256 -> #I measured = 137 286 372 ; #I estimated =  134 217 728 
+Size : 128 -> #I measured = 18 247 930 ; #I estimated = 16 777 216
+Size : 512 -> #I measured = 1 083 806 041 ; #I estimated = 1 073 741 824
+PARA O0:
+Size : 512 -> #I measured = 6 732 358 842 ; #I estimated = 6 710 886 400
+
+Como podemos ver os valores medidos são diferentes dos valores estimados, ainda assim os valores medidos são da mesma ordem de grandeza dos valores estimados.
+A diferença entre valores medidos e valores estimados está principalmente na inicialização das matrizes resultado e na inicialização das matrizes a serem multiplicadas.
+
+
+Para size : 128 ->
+
+8*128^3*2^3 = 8*256^3 
+
+Para size : 256 ->
+
+8*256^3*2^3 = 8*512^3 
+
+Com base no que vemos em cima, conseguimos perceber que o aumento de complexidade aumenta 8x quando o N dobra 
+
+e)
+What is the gain obtained with the O2 optimisation level on a 512x512 matrix?
+R: O ganho é calculado com base na seguinte formula:
+
+Ganho = Valor novo / Valor antigo  * 100 = 0.86956 / 0.564972 * 100 = 153,912052279 % 
+
+What component of the performance equation is responsible for this gain? 
+R: O componente na equação de performance que é responsavel por este ganho é o número de instruções que contem o código de multiplicação de matrizes. 
+
+Why it is lower than expected (estimated in 1b)?
+R: Com a otimização O2 o número de instruções é reduzido, sendo assim o programa possui um tempo de execução menor que o programa com otimização em O0, uma vez que este conta com um maior número de instruções 
+
+Exercicio 2 - 
+a) 
+O CPI é maior em alguns casos do que outros, porque para alguns N, a matriz cabe nas caches sendo assim temos diferentes numeros de CPI, pois algumas matrizes estão na cache L1 enquanto que outras matrizes estão na cache L2
+e ainda outras matrizes na mem principal.
+
+Desta forma o número de clock cycles utilizado não é sempre o mesmo em todas as matrizes de diferentes tamanhos, devido aos acessos á memoria.
+b) 
+O O0 possui um CPI mais baixo do que o O2 uma vez que a complexidade de instruções O2 é maior que a complexidade de instruções O0, sendo assim o CPI da solução O0 é menor que o CPI da solução O2.
+c) e d)
+Iremos ter de fazer a instrução movsd e depois fazer a instrução mulsd. Desta forma temos um RAW nestas duas instruções, logo:
+
+            movsd (%rdx), %xmm0   addq $8, %rdx
+               |                      |
+            mulsd (%rax), %xmm0   addq $4096, %rax 
+               |                      |
+            addsd %xmm0, %xmm1     cmpq %rax, %rsi
+               |                      |
+            movsd %xmm1, (%rcx)    jne .L12
+
+As dependências RAW, acontecem entre as instruções que se encontram na vertical, desta forma, podemos executar de forma paralela as instruções que se encontram de forma horizontal.
+e) 
+Como nós temos 4 ciclos de clock utilizados para fazer todas as intruções temos o seguinte:
+
+CPI = # ClockCycles / #Instructions =  4 / 8  = 1 / 2 = 0.5 
+

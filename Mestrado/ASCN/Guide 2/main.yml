@@ -1,0 +1,45 @@
+---
+- name: sudo add-apt-repository ppa:ondrej/php
+  apt_repository:
+    repo: ppa:ondrej/php
+  become: true
+- name: sudo apt update
+  apt: 
+    update_cache: true
+  become: true
+- name: sudo apt install dependencies
+  apt:
+    name: "{{item}}"
+  loop: "{{app_packages}}"
+  become: yes
+- name: Clone Swap git repository
+  git:
+    repo: https://github.com/Hackathonners/swap.git
+    dest: /home/vagrant/swap
+    update: true
+- name: composer install
+  composer:
+    command: install
+    working_dir: /home/vagrant/swap
+- name: npm install
+  npm:
+    ci: true
+    path: /home/vagrant/swap
+- name: change the database configs
+  templates: 
+    src: templates/env_example
+    path: /home/vagrant/swap/.env
+- name: generate the Swap key
+  shell: php artisan key:generate
+  args:
+     chdir: /home/vagrant/swap
+- name: run database migrations
+  shell: php artisan migrate
+  args:
+     chdir: /home/vagrant/swap
+- name: Start app
+  shell: nohup php artisan serve --host=0.0.0.0 > app_out.log 2>&1 &
+  args:  
+    chdir: /home/vagrant/swap
+
+

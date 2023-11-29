@@ -1,0 +1,3 @@
+/home/goncalo/Desktop/FACULDADE/3ºAno/CG/cmake-build-debug/CMakeFiles/class3.dir
+/home/goncalo/Desktop/FACULDADE/3ºAno/CG/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/goncalo/Desktop/FACULDADE/3ºAno/CG/cmake-build-debug/CMakeFiles/rebuild_cache.dir

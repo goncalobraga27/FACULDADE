@@ -1,0 +1,38 @@
+USE CASE: criação de pilotos 
+Descrição: O jogador administrador cria pilotos 
+Cenário: 4 
+Pré-condição: É registado no jogo um jogador administrador 
+Pós-condição: É criado um piloto, que pode competir em campeonatos
+Fluxo Normal: 
+	1. Um jogador faz login no jogo como administrador
+	2. O jogador decide inserir um novo piloto
+	3. O jogador indica o nome do novo piloto a criar 
+	4. O jogador indica o CTS do novo piloto a criar 
+	5. O jogador indica o SVA do novo piloto a criar 
+	6. O sistema verifica senão existe nehum piloto criado igual 
+	7. O piloto é registado e fica disponível para competir em campeonatos
+Fluxo Alternativo: O jogador pretende alterar alguns atributos do piloto, 
+criando uma segunda versão do mesmo 
+	1. Um jogador faz login no jogo como administrador
+	2. O jogador decide inserir um novo piloto
+	3. O jogador indica o nome do novo piloto a criar
+	4. O sistema deteta que existe um piloto igual já criado 
+	5. O jogador pede para alterar alguns atributos desse piloto
+	6. O jogador indica o novo CTS do piloto 
+	7. O jogador indica o novo SVA do piloto
+	8. O sistema aceita as alterações feitas ao jogador 
+	9. O piloto é registado e ficaa disponível para competir em campeonatos 
+Fluxo de Excepção (1): O jogador não pode criar pilotos 
+	1. Um jogador faz login no jogo sem ser como administrador
+      2. Sistema bloqueia a criação de pilotos por parte deste jogador(não é administrador)
+      3. Termina processo
+Fluxo de Excepção (2): Existe a tentativa de registar novamente o mesmo piloto
+	1. Um jogador faz login no jogo como administrador
+	2. O jogador decide inserir um novo piloto
+	3. O jogador indica o nome do novo piloto a criar 
+	4. O jogador indica o CTS do novo piloto a criar 
+	5. O jogador indica o SVA do novo piloto a criar 
+	6. O sistema verifica senão existe nehum piloto criado igual 
+	7. O sistema deteta que tem já criado um piloto igual ao pretendido
+	8. Termina processo 
+

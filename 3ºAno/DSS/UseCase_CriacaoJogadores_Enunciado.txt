@@ -1,0 +1,32 @@
+USE CASE: criação de jogadores 
+Descrição: Um utilizador regista-se no jogo
+Cenário: ------------
+Pré-condição: Um utilizador quer registar-se no jogo 
+Pós-condição: É criado um jogador, que pode administrar o jogo, ou jogá-lo 
+Fluxo Normal: Criação de um jogador administrador 
+	1. Sistema pede um nome de utilizador
+	2. Sistema pede uma password 
+	3. O utilizador escolhe ser administrador do jogo 
+	4. O sistema cria o jogador administrador
+Fluxo Alternativo : Criação de um jogador "normal"
+	1. Sistema pede um nome de utilizador
+	2. Sistema pede uma password
+	3. O utilizador escolhe ser jogador "normal" do jogo 
+	4. O sistema cria o jogador 
+Fluxo Excepção (1): Password inválida 
+	1. Sistema pede um nome de utilizador 
+	2. Sistema pede uma password
+	3. Sistema não obtém uma password válida 
+	4. Sistema cancela criação de jogador 
+Fluxo Excepção (2): Nome de utlizador inválido 
+	1. Sistema pede um nome de utilizador 
+	2. Sistema não obtém um nome de utilizador válido
+	3. Sistema cancela criação de jogador 
+Fluxo Excepção (3): Não é indicado o tipo de jogador 
+	1. Sistema pede um nome de utilizador
+	2. Sistema pede uma password 
+	3. Não é escolhido o tipo de jogador a criar 
+	4. Sistema cancela criação de jogador
+
+	 
+	 

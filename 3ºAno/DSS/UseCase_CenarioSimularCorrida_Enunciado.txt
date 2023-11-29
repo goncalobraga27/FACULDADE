@@ -1,0 +1,17 @@
+USE CASE: simular corrida
+Descrição: Simulação de corridas
+Cenário: 5- Simular Corrida 
+Pré-condição: Todos os carros que vão participar estão prontos 
+Pós-condição: São apresentados os resultados da corrida 
+Fluxo Normal: 
+	1. Os jogadores possuem todo o "race setup" pronto 
+	2. O sistema (Racing Manager) simula a corrida 
+	3. A corrida termina 
+	4. Os resultados da corrida são apresentados 
+	5. Estes resultados são "juntos" aos resultados das outras corridas
+Fluxo Excepção: Caso a corrida não termine 
+	1. Os jogadores possuem todo o "race setup" pronto 
+	2. O sistema (Racing Manager) simula a corrida 
+	3. A corrida não termina, devido a um erro na simulação 
+	4. Jogador Administrador é notificado do ocorrido 
+	5. Termina o processo 

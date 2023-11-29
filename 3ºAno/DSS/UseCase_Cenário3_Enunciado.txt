@@ -1,0 +1,55 @@
+USE CASE: criação de carros 
+Descrição: Jogador administrador cria carros
+Cenário: 3
+Pré-condição: É registado no jogo um jogador administrador 
+Pós-condição: É criado um carro, que pode ser utlizado em campeonatos
+Fluxo Normal: O carro a criar, se a categoria o permitir, é hibrído 
+	1. O jogador faz login no jogo como administrador 
+	2. O jogador decide inserir um novo carro 
+	3. O jogador escolhe qual a categoria do carro a criar
+	4. O jogador indica a marca do carro a criar 
+	5. O jogador indica o modelo do carro a criar 
+	6. O jogador indica a cilindrada e a potência que tem o carro a criar 
+	7. O jogador com base na categoria escolhida para o carro, decide que o carro é hibrído
+      8. O jogador indica a potência adicional do motor elétrico
+	9. O jogador indica qual o tipo de setup escolhido para configurar no carro
+	10. O sistema verifica se este carro já se encontra criado
+	11. O carro é criado e fica disponível para ser utilizado em campeonatos 
+Fluxo Alternativo(1): O carro a criar, se a categoria o permitir, não é hibrído 
+	1. O jogador faz login no jogo como administrador 
+	2. O jogador decide inserir um novo carro 
+	3. O jogador escolhe qual a categoria do carro a criar
+	4. O jogador indica a marca do carro a criar 
+	5. O jogador indica o modelo do carro a criar 
+	6. O jogador indica a cilindrada e a potência que tem o carro a criar 
+	7. O jogador com base na categoria escolhida para o carro, decide que não é hibrído
+	8. O jogador indica qual o tipo de setup escolhido para configurar no carro
+	9. O sistema verifica se este carro já se encontra criado
+	10. O carro é criado e fica disponível para ser utilizado em campeonatos 
+Fluxo Alternativo(2): O carro a criar, devido á categoria, não pode ser híbrido
+	1. O jogador faz login no jogo como administrador 
+	2. O jogador decide inserir um novo carro 
+	3. O jogador escolhe qual a categoria do carro a criar
+	4. O jogador indica a marca do carro a criar 
+	5. O jogador indica o modelo do carro a criar 
+	6. O jogador indica a cilindrada e a potência que tem o carro a criar 
+	7. O jogador indica qual o tipo de setup escolhido para configurar no carro
+	8. O sistema verifica se este carro já se encontra criado
+	9. O carro é criado e fica disponível para ser utilizado em campeonatos 
+Fluxo Excepção(1): O jogador não pode criar carros 
+	1. Um jogador faz login no jogo sem ser como administrador
+      2. Sistema bloqueia a criação de carros por parte deste jogador(não é administrador)
+      3. Termina processo
+Fluxo Excepção(2): O carro que se está a tentar criar já existe 
+	1. O jogador faz login no jogo como administrador 
+	2. O jogador decide inserir um novo carro 
+	3. O jogador escolhe qual a categoria do carro a criar
+	4. O jogador indica a marca do carro a criar 
+	5. O jogador indica o modelo do carro a criar 
+	6. O jogador indica a cilindrada e a potência que tem o carro a criar
+	7. O jogador escolhe se o carro é híbrido ou não,consoante a sua categoria 
+	8. O sistema deteta que existe um carro criado, exatamente igual
+	9. Sistema bloqueia a criação do carro
+	10. Termina o processo
+ 
+	

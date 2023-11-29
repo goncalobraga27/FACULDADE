@@ -1,0 +1,18 @@
+USE CASE: criar um campeonato no jogo 
+Descrição: Um jogador administrador cria um campeonato 
+Cenário: 1 
+Pré-condição: É registado no jogo um jogador administrador 
+Pós-condição: É criado um campeonato, que pode ser jogado 
+Fluxo Normal:
+	1. Um jogador faz login no jogo como administrador 
+	2. Adiciona o campeonato á lista de campeonatos disponíveis 
+	3. Dá um nome ao campeonato criado 
+	4. Adiciona circuitos ao campeonato criado 
+	5. Consulta a lista de campeonatos criados 
+	6. Adiciona o campeonato á lista de campeonatos disponíveis de serem jogados imediatamente
+Fluxo Excepção:
+	1. Um jogador faz login no jogo sem ser como administrador
+	2. Sistema bloqueia a criação de campeonatos por parte deste jogador(não é administrador)
+	3. Termina processo
+
+ 

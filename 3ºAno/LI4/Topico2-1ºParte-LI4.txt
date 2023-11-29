@@ -1,0 +1,23 @@
+Hoje em dia, as pessoas mais jovens, cada vez menos se interessam por feiras comerciais, 
+alterando o seu interesse para compras "online". 
+Por este motivo está na hora das feiras comerciais inovarem e alterarem a sua maneira de atrairem 
+eventuais clientes. 
+
+É NECESSÁRIO MODERNIZAR AS ATUAIS FEIRAS E CERTAMES COMERCIAIS.
+
+Com isto, achamos que é deveras englobalizador a criação de uma aplicação online para
+as feiras comerciais. 
+
+O modelo de negócio tem como base as aplicações já existentes nas vendas online.
+Em primeiro lugar, existe uma fidelização de clientes á plataforma 
+Tal como acontece, com os clientes, os promotores dos certames comerciais também têm de inscrever o certame que estão a promover na plataforma 
+Com isto terminado, surgem os vendedores de produtos, que se associam a um determinado certame comercial, e colocam á venda os seus produtos.
+Quando é realizada uma venda, esse mesmo produto é colocado no carrinho de compras do cliente, até ao pagamento do mesmo.
+
+Acreditamos que este é o modelo de negócio a seguir, pois retrata a realidade de um certame comercial físico, e já se encontra em funcionamento
+noutras plataformas comerciais que funcionam a nível online. 
+Ainda assim queremos tornar a nossa plataforma fácil de utilizar por todos os utilizadores, mesmo aqueles com menos aptidão tecnológica,
+e eficiente, para assim poupar tempo e recursos financeiros aos nossos clientes. 
+
+
+

@@ -1,0 +1,33 @@
+Na aula nº1 de ASCN utilizamos o "vagrantfile" que foi criado e utilizado na aula nº0. 
+
+1º Executamos os servidores (server1 e server2) com base no vagrantfile da aula passada (Aula nº0);
+2º Depois de estarem ON, realizamos o guião da aula nº1;
+3º Neste guião, o objetivo passa por executar a aplicaçã́o SWAP nas duas máquinas virtuais
+
+1 MÁQUINA -> VM1 -> Vai possuir a aplicação SWAP a executar
+2 MÁQUINA -> VM2 -> Vai possuir a base de dados da aplicação a desenvolver 
+
+4º Dar setup às duas máquinas virtuais, tal como:
+
+VM2 -> Vai possuir a base de dados e todos os serviços ligados com a persistência de dados 
+VM1 -> Vai suportar a aplicação em si, permitindo assim que vários clientes acedam ao sistema remotamente. 
+
+5º Verificar na VM1 se a aplicação SWAP está a funcionar corretamente
+
+
+Dados de setup da base de dados no mysql:
+
+username : VM1 
+password : VM1	
+
+
+VANTAGENS DA ARQUITETURA DA SOLUÇÃO : 
+A arquitetura da solução, engloba duas máquinas virtuais. Uma das máquinas virtuais serve para suportar a base de dados enquanto que outra serve para suportam o bom funcionamento da aplicação.
+
+Sendo assim, esta arquitetura tem várias vantagens tal como :
+- Permite que o sistema fique localizado de forma distríbuida em diversas máquinas, aliviando a carga sobre os recursos disponíveis. 
+- Permite uma maior segurança da informação que se encontra localizada na base de dados. Como a base de dados se encontra numa máquina diferente da que suporta a aplicação faz com que os utilizadores apenas acedam à VM1, logo se alguma coisa acontecer de mal na VM1 não irá ter problemas na VM2 pois não têm acesso a esta máquina virtual. 
+- Com esta repartição de serviços dentro da aplicação, permite que a VM1 faça uma melhor gestão dos pedidos que recebe, logo pode atender mais clientes, uma vez que não tem de alocar recursos para interagir com a base de dados. 
+
+
+O ip 0.0.0.0 é a mesma coisa que ter o ip 127.0.0.1 (localhost), mas sem as interfaces de rede. 

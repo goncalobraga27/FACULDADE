@@ -1,0 +1,84 @@
+PROCESSAMENTO VETORIAL ->
+
+Tem processamento vetorial quando:
+
+a | b | c | d 
++   +   +   +
+e | f | g | h 
+     ==
+a+e|b+f|c+g|d+h
+
+Não tem processamento vetorial quando:
+a | b | c | d = a+b+c+d 
+
+
+EXERCÍCIO 2a) -> 
+
+Para o ciclo i j k temos :
+
+C não pode ser vetorial, pois estamos a reduzir um vetor a uma soma 
+
+A pode ser vetorial, porque acedemos sempre a um vetor 
+
+B não pode ser vetorial, porque acedemos não acedemos a um vetor consequente, acedemos às colunas 
+
+Para o ciclo i k j  temos :
+
+C pode ser vetorial, pois o j varia primeiro que o i, logo iremos aceder primeiro aos elementos da mesma linha 
+
+A pode ser vetorial, pois o k varia primeiro que o i, logo iremos aceder primeiro aos elementos da mesma linha
+
+B pode ser vetorial, pois o j varia primeiro que o k, logo iremos aceder primeiro aos elementos da mesma linha 
+
+Para o ciclo j k i temos:
+
+C não pode ser vetorial, pois o i varia primeiro que o j, logo iremos aceder primeiro aos elementos da mesma coluna 
+
+A não pode ser vetorial, pois o i varia primeiro que o k, logo iremos aceder primeiro aos elementos da mesma coluna
+
+B pode ser vetorial, pois estamos a ler o conteudo de B 
+
+
+EXERCÍCIO 2b) -> 
+
+Como estamos a trabalhar com doubles, cada double tem 8 bytes logo 64 bits. Assim, este vetor de 128bits pode levar 2 doubles de cada vez.
+
+Para ver o assembly fazemos a flag -S. 
+
+Para identificar o código assembly, temos de ver na função multmatriz, o salto para trás. Assim as primeiras instruções são do ciclo interno 
+
+Código assembly, do ciclo interno do codigo vetorizado mas sem flags 
+
+movl    (%rdi), %edx
+        imull   (%r8,%rax), %edx
+        addl    %edx, (%rcx,%rax)
+        addq    $4, %rax
+        cmpq    $2048, %rax
+
+Código assembly, do ciclo interno do codigo vetorizado mas sem flags 
+
+
+EXERCICIO 3 -> 
+
+Com base na arquitetura da máquina, nós podemos fazer 2 operações de FP ao mesmo tempo.
+
+Em cada FP podemos processar ao mesmo tempo 4 elementos                                       -> 2 * 2,5 * 4 = 20 GFlops 
+
+Como a frequência do clock da máquina é de 2,5 GHz 
+
+Isto é como se não acedecemos à memória  -> Como se tivessemos tudo em cache de instruções 
+Se tirarmos a vetorização, o FP apenas trataria de 1 elemento e não de 4 como é suposto
+
+
+2 Float operation no código | Tenho 2 doubles, logo tenho 16 bytes | Logo a complexidade é 2 / 16  = 0.125
+
+
+
+AVX -> 256 bits == 4 doubles                                   
+                                                                    -> Assim faço 8 operações de double ao mesmo tempo 
+2 Float operation na arquitetura simultaneamente                      
+
+
+Como a frequencia é de 2,5 GHz, temos:
+
+Total = 2,5 GHz * 8 = 20 G flops 

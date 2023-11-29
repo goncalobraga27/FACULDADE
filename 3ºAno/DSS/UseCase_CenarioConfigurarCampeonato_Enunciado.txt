@@ -1,0 +1,18 @@
+USE CASE: configurar o campeonato 
+Descrição: Configuração do campeonato para ser jogado 
+Cenário: 5-Configurar campeonato 
+Pré-condição: Jogadores querem jogar o campeonato 
+Pós-condição: O campeonato que foi configurado já é possível ser jogado
+Fluxo Normal: 
+	1. Utilizador faz login no jogo 
+	2. Jogador decide jogar um campeonato 
+	3. Jogador escolhe qual o carro a utilizar no campeonato 
+	4. Jogador escolhe o piloto a utilizar no campeonato 
+	5. Campeonato fica disponível para ser jogado 
+Fluxo Excepção: Não existem campeonatos criados 
+	1. Utlizador faz login no jogo 
+	2. Jogador decide jogar campeonato 
+	3. Sistema verifica que não existem campeonatos criados 
+	4. Jogador é notificado, devido a não existirem campeonatos criados 
+	5. Termina o processo 
+	

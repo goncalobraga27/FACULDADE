@@ -1,0 +1,40 @@
+sig Bucket {
+	head : lone Node
+}
+
+sig Node {
+	key : one Key,
+	prox : lone Node
+}
+
+sig Key {
+	hash : one Hash
+}
+
+sig Hash {}
+
+pred Invs {
+	
+  	// 1- Todo o nodo tem de estar na cabeça ou nos próximos elementos da lista ligada  
+	
+	all nodo: Node | one buc : Bucket | nodo in buc.head or nodo in buc.head.^(prox)
+  	
+ 	// 2- Todo o nodo node não está na cauda desse próprio nodo
+  
+  	all nodo: Node | nodo not in nodo.^(prox)
+  
+  	// 3- Dois bucktes diferentes têm hash diferentes 
+
+  	all b,c:Bucket | b!=c implies all b1:(b.head.^(prox)+b.head),c1:(c.head.^(prox)+c.head)| c1.key.hash != b1.key.hash 
+
+   // 4- Dentro do mesmo bucket não há 2 keys iguais
+  
+  	all b:Bucket | all b1:(b.head+b.head.^(prox)) | all b2:b1.^(prox)| b1.key!=b2.key
+
+  // 5- Todas as hash de um Bucket são iguais 
+  
+   (all k:Key | some n:Node | k = n.key) and all b:Bucket | all b1:(b.head+b.head.^(prox)) | all c:b1.^(prox)| c.key.hash=b1.key.hash
+
+}
+
+LINK: http://alloy4fun.inesctec.pt/3cWZb2mvuPXvEBuXD

@@ -1,0 +1,24 @@
+Na aula 3, nós fizemos a instalação automática da aplicação do swap.
+
+Para tal, temos de iniciar 3 virtual machines.
+As 3 virtual machines são arquitetadas da seguinte forma:
+VM1 -> Possui a app do swap 
+VM2 -> Possui a db do swap 
+ProvisionVM -> É responsável pela instalação e manuteção das VM1 e VM2 
+
+Desta forma, foi nos fornecido um vagrantfile que nos cria e instala estas 3 máquinas virtualizadas. 
+
+De seguida, criamos um host.inv file que se encontra armazenado no ProvisionVM, que nos indica os elementos existentes na rede:
+Sendo assim temos: 
+[db]
+192.168.56.102
+[app]
+192.168.56.101
+
+
+Podemos fazer um ping para ver se as duas VMS, a app e a db são reachable a partir da ProvisionVM. 
+
+Depois de fazer isto, utilizamos o playbook ancible criado pelo stores para dar deploy e provisioning da base de dados na VM2 
+
+
+O desafio desta tarefa, é sermos nós a criar o playbook ancible para gerir tudo. Assim numa primeira fase, apenas criamos o playbook ancible para gerir a db, que posteriormente irá se estender à app. 

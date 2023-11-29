@@ -1,0 +1,16 @@
+Como nos foi dito na apresentação do projeto a desenvolver, o desafio passa por tornar algo físico
+do nosso dia a dia, em algo que pudesse ser realizado de forma online.
+Sendo assim o objetivo final do projeto é desenvolver uma aplicação de feiras online, que envolva todo o processo de compra e venda de produtos existente
+nas feiras / certames físicos.
+
+
+Esta aplicação tem de ter em conta, as diferentes "vistas" que as feiras possuem, como: 
+-Fidelização de clientes;
+-Inscrição de certames/feiras comerciais;
+-Inscrições de vendedores nos certames que assim o desejam;
+-Venda dos produtos ( carrinho de compras virtual e processos de pagamento);
+
+
+Com base, no que foi dito anteriormente, a nossa aplicação deve englobar de forma perentória estes
+aspetos e conseguir manipulá-los de forma a dar uma experiência agradável e bastante intuitiva aos
+clientes.

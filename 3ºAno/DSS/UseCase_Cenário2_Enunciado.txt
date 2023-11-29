@@ -1,0 +1,20 @@
+USE CASE: criação de circuitos no jogo 
+Descrição: Jogador administrador faz a criação de um circuito 
+Pré-condição: É registado no jogo um jogador administrador 
+Pós-condição: É criado um circuito, que pode ser inserido em campeonatos 
+Fluxo Normal:
+	1. Um jogador faz login no jogo como administrador
+	2. O jogador decide inserir um novo circuito 
+	3. Dá um nome ao circuito 
+	4. Indica a distância que o circuito possui 
+	5. Indica o número de curvas que o circuito possui 
+	6. Indica o número de chicanes que o circuito possui
+	7. O sistema calcula o número de retas que o circuito possui
+	8. É indicado o GDU em cada curva, reta e chicane do circuito 
+	9. O circuito é registado no sistema 
+	10. Indica o número de voltas que cada corrida possui 
+	11.O circuito passa a estar disponível para integrar campeonatos 
+Fluxo Excepção:
+	1. Um jogador faz login no jogo sem ser como administrador
+    	2. Sistema bloqueia a criação de circuitos por parte deste jogador(não é administrador)
+    	3. Termina processo

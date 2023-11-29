@@ -1,0 +1,57 @@
+Exercise 1 - Spatial Locality
+
+a) Data locality analysis: Look at the traditional matrix multiplication version (the DOT version, in the
+algorithm/figure above). For each memory access (Cij, Aik and Bkj) identify those that exhibit spatial
+locality (suggestion: start by looking at the DOT definition, eventually also look at the DOT assembly
+code in lab guide 1, exercise 2c).
+
+R: Olhando para o algoritmo DOT, a matriz que possui localidade espacial, neste algoritmo é a matriz A e C. 
+A matriz A possui localidade espacial, pois nós acedemos repetidamente a elementos da mesma linha da matriz A e só depois acedmos a outros elementos da matriz
+Na matriz C guardamos os valores calculados por linha, isto é, guardamos o primeiro valor da linha 0 e a seguir guardamos os restantes valores da linha 0.Depois de guardarmos os valores da linha 0, guardamos os valores da linha 1.
+
+b) Estimation of data locality impact: Estimate the number of level 1 cache misses for a NxN matrix,
+assuming that matrix size is greater than the L1 data cache size (suggestion: focus on the matrix accesses
+without spatial locality). Fill the table with the estimated valuesfor this base version. How many L1 cache
+misses are expected per instruction executed (with -O2 optimisation)?
+
+R: A cache L1 tem 64 Bytes.
+Cada double tem 8 Bytes, logo esta cache pode armazenar no máximo 8 doubles (64/8=8).
+
+A estimativa de cache misses para a matriz C é de N^2/8.(N^2 - porque está dentro de 2 ciclos || 8 -> Porque cada linha da cache tem 8 doubles, e esta matriz possui localidade espacial)
+A estimativa de cache misses para a matriz B é de N^3.(porque está dentro de 3 ciclos no algoritmo)
+A estimativa de cache misses para a matriz A é de N^3/8.(N^3 - porque está dentro de 3 ciclos || 8 -> Porque cada linha da cache tem 8 doubles, e esta matriz possui localidade espacial)
+
+c)Improvement of spatial locality: Design an optimised DOT implementation by transposing matrix A
+and/or B in order to get the best spatial locality. Estimate the number of level 1 cache misses of this
+“transp” version and fill the table with the estimated values (ignore the cost of transposing the matrix).
+
+R: A matriz que tem de ser transposta é a matriz B, uma vez que assim poderiamos obter localidade espacial nesta matriz. 
+
+A estimativa de cache misses para a matriz C é de N^2/8.(N^2 - porque está dentro de 2 ciclos || 8 -> Porque cada linha da cache tem 8 doubles, e esta matriz possui localidade espacial)
+A estimativa de cache misses para a matriz B é de N^3/8.(N^3 - porque está dentro de 3 ciclos || 8 -> Porque cada linha da cache tem 8 doubles, e esta matriz possui localidade espacial)
+A estimativa de cache misses para a matriz A é de N^2/8.(Para cada linha a ser calculada na matriz C, nós estamos sempre a utilizar a mesma linha na matriz A. Sendo assim apenas precisamos de ler uma vez a linha de A para uma linha de C a ser calculada)
+
+
+d) Measure and discuss the results: Measure the number of L1 data cache misses with perf stat -e
+L1-dcache-load-misses -M cpi ./a.out. Complete the table for matrix size of 512x512
+(always using the -O2 optimisation level) for the base and for the optimised (i.e., with the transpose)
+versions. What is the explanation for the performance differences between these two versions? Why is
+the gain not directly proportional to the improvement in cache misses?
+
+R : 
+
+512 | base() | 0.49s | 1.1 | 1 113 003 829 | 151 027 712 | 142 421 174  | 12.80 % 
+512 | transp() | 0.17495s | 0.4 | 977 694 512 | 33 816 576 | 17 152 371 | 3 % 
+
+
+Exercise 2 - Temporal locality
+
+a) Look at the base matrix multiplication code and identify matrix positions (only for matrix A and B) that
+are reloaded from memory in outer loops (note: this can also be identified looking at the DOT figure).
+Change the inner loop to take advantage of this temporal locality (e.g., to compute 4 dot products in the
+inner loop) and estimate the improvement in L1 cache misses for a large matrix size.
+
+R: A matriz B pode exibir localidade temporal, uma vez que se acedermos sempre as colunas da matriz B temos localidade temporal. 
+Se multiplicarmos na matriz C ,as linhas da matriz A , e aceder a todas as colunas de B previamente, então apenas multiplicamos a linhas da matriz A com as colunas de B acedidas previamente.
+
+Possuimos assim localidade espacial na matriz A e localidade temporal na matriz B. 

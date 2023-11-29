@@ -1,0 +1,34 @@
+Computação Paralela :
+AULA 0 (Dia 13 de Setembro de 2023) -> 
+Para executar o perf, na nossa máquina nativa, é necessário utilizar o seguinte comando:
+-> sudo perf stat -e "tipo de operação que queremos avaliar" ./"nome do executável"
+
+"tipo de operação que queremos avaliar" : esta flag pode ser, por exemplo:  instructions,cycles, duration_time
+"nome do executável" : nome do executável em que se encontra o código a ser executado e já compilado 
+
+
+Para termos uma melhor accuracy do código devemos compilar da seguinte maneira:
+        -g -fno-omitframe-pointer
+
+SEARCH ->
+
+Para nos conectarmos com o Search, temos de fazer o seguinte:
+        ssh <student_id>@s7edu.di.uminho.pt
+Depois colocamos a password que está no email institucional 
+De seguida:
+        module load gcc/7.2.0
+De igual forma: 
+        gcc ex1.c -o ex1
+Para executar o programa :
+srun --partition=cpar perf stat -e instructions,cycles "full_path"/"executável"
+
+"full_path" é o caminho para chegar ao ficheiro carregado para o Search. Se tivermos a executar o programa na diretoria para a qual este foi carregado basta apenas o nome do ficheiro no full_path
+"executável" é o ficheiro que contém o executavel que está compilado no SEARCH
+
+
+PARA SUBMETER FICHEIRO LOCAIS QUE EXISTAM NA MÁQUINA, É PRECISO TER ESTE PROCEDIMENTO:
+    scp ex1.c pg53845@s7edu.di.uminho.pt:.
+
+Neste caso copia-se o ficheiro ex1.c que se encontra na diretoria corrente. Caso não se esteja na diretoria corrente tem de se colocar o path todo para chegar ao ficheiro
+
+
