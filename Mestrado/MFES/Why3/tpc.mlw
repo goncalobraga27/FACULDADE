@@ -39,14 +39,15 @@ module QuickSort
 
 
   let rec function partition (x : int) (l : list int) : (list int , list int)
-    ensures { let (l1,l2) = result in forall y:int . mem y l1 -> x >= y }
-    ensures { let (l1,l2) = result in forall z:int . mem z l2 -> x <= z } 
-    ensures { let (l1,l2) = result in permut ( Cons x (l2) ++ (l1)) l }
+    ensures { let (l1,l2) = result in forall y:int. mem y l2 -> y >= x }
+    ensures { let (l1,l2) = result in forall z:int. mem z l1 -> z <= x } 
+    ensures { let (l1,l2) = result in permut l ((l2) ++ (l1)) }
+    variant { length l}
   =
     match l with 
     | Nil -> (Nil,Nil)
     | Cons head tail -> 
-        let (l1,l2) = partition head tail in 
+        let (l1,l2) = partition x tail in 
         if head >= x then 
         ( l1, Cons head l2 )
         else 
