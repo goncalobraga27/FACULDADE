@@ -46,28 +46,36 @@ module Offices
 
   predicate hasOffice (person) (office)
 
-  axiom A1: forall p : person . exists o : office . hasOffice(p)(o)
+  axiom A1 : forall p : person.exists o : office . hasOffice(p)(o)
   
-  axiom A1_2: forall o1,o2: office,  p : person . hasOffice(p)(o1) /\ hasOffice(p)(o2) -> o1 = o2
+  axiom A2 : forall p : person.exists o1,o2 : office . hasOffice(p)(o1) /\ hasOffice(p)(o2) -> o1 = o2
   
-  
-  predicate alone (p:person) = forall p1 : person . exists o : office . hasOffice(p1)(o) -> p1 = p 
+  predicate alone (p:person) = forall o : office . exists p1: person . hasOffice(p)(o) /\ hasOffice(p1)(o) -> p = p1
 
-  axiom A2: forall o: office . hasOffice(Nuno)(o) -> not hasOffice(Pedro)(o) /\ hasOffice (Pedro)(o) -> not hasOffice(Nuno)(o)
-  
-  axiom A3: alone(Ana) -> alone(Pedro)
-  
-  axiom A4: forall p1,p2,p3: person , o : office. hasOffice p1 o /\ hasOffice p2 o /\ hasOffice p3 o -> p1 = p2 \/ p1 = p3  
+  axiom B : forall o,o1: office . 
+  hasOffice (Pedro) (o) /\ hasOffice Nuno o1 -> o <> o1
 
-  goal SAT: false 
- 
-  goal G1: hasOffice Maria One -> alone Maria 
+  axiom C : alone Ana -> alone Pedro
   
-  goal G2: forall o : office. hasOffice Ana o /\ hasOffice Nuno o -> exists o1 : office . hasOffice Maria o1 /\ hasOffice Pedro o1 
+  axiom D : forall p1,p2,p3 : person , o : office . 
+  hasOffice(p1)(o) /\ hasOffice (p2)(o) /\ hasOffice (p3)(o) -> p1 = p2 \/ p1 = p3 \/ p2 = p3 
 
-  predicate empty (o:office) = forall p: person. not (hasOffice p o)     
+  goal SAT : false 
   
-  lemma atMostOneEmpty :  forall o1,o2 : office . empty(o1) /\ empty(o2) -> o1 = o2 
+  goal g1 : hasOffice Maria One -> alone Maria
+  
+  goal g2 : forall o: office . hasOffice Ana o /\ hasOffice Nuno o ->
+      exists o1: office . hasOffice Maria o1 /\ hasOffice Pedro o1 
+
+  predicate empty (o:office) = forall p : person. not hasOffice p o
+  
+  lemma atMostOneEmpty : (empty One /\ not empty Two /\ not empty Three) \/
+  
+  (not empty One /\ empty Two /\ not empty Three) \/ (not empty One /\ not empty Two /\ empty Three) \/
+  
+  (not empty One /\ not empty Two /\ not empty Three)
+  
+  (* forall o1 o2 :office. empty o1 /\ empty o2 -> o1=o2*)
 
 end 
 
@@ -81,26 +89,32 @@ module Offices_Fn
 
   function office (person) : office
 
+  axiom B : office Nuno <> office Pedro
+      
+  predicate alone (p:person) = forall p1 : person . office p = office p1 -> p = p1
 
+  axiom C: alone Ana -> alone Pedro 
   
-  
-  predicate alone (p:person) = forall p1 : person . p1 <> p -> office(p1) <> office(p)
+  axiom D : forall p1,p2,p3: person . office p1 = office p2 /\ office p2 = office p3 ->
+      p1 = p2 \/ p1 = p3 \/ p2 = p3 
 
-  axiom A2: office Nuno <> office Pedro 
-  
-  axiom A3: alone(Ana) -> alone(Pedro)
-  
-  axiom A4: forall p1,p2,p3: person . office p1 = office p2 /\ office p2 = office p3 -> p1 = p2 \/ p1 = p3  
 
   goal SAT: false 
-  
-  goal G1: office Maria = One -> alone Maria 
-  
-  goal G2: office Ana = office Nuno -> office Maria = office Pedro
 
-  predicate empty (o:office) = forall p: person. office(p) <> o 
+  goal g1 : office Maria = One -> alone Maria 
   
-  lemma atMostOneEmpty : forall o1,o2 : office . empty(o1) /\ empty(o2) -> o1 = o2 
+  goal g2 : office Ana = office Nuno -> office Maria = office Pedro
+
+  predicate empty (o:office) = forall p : person . office p <> o 
+  
+  lemma atMostOneEmpty : (empty One /\ not empty Two /\ not empty Three) \/
+  
+  (not empty One /\ empty Two /\ not empty Three) \/ (not empty One /\ not empty Two /\ empty Three) \/
+  
+  (not empty One /\ not empty Two /\ not empty Three)
+  
+  (* forall o1 o2 :office. empty o1 /\ empty o2 -> o1=o2*)
+
 
 end 
 

@@ -1,0 +1,81 @@
+module Label
+
+  use int.Int
+
+
+(*
+sig Item {
+    var labels : set Label
+}
+sig Label {}
+*)
+
+  type item = int
+  type labl = int
+  
+  clone set.SetImp with type elt = (item,labl)
+
+  type rel = set
+
+  val copy (r:rel) : rel
+    ensures { result == r }       
+
+  type stateT = { labels : rel }
+
+  val state : stateT
+
+
+
+(*
+pred affix [i : Item, l : Label] {
+	l not in i.labels
+	labels' = labels + i->l
+}
+*)
+
+  let affix (i:item) (l:labl)
+    requires { not mem (i,l) state.labels }
+    ensures  { state.labels = add (i,l) (old state.labels) }
+  =
+    add (i,l) state.labels     
+  
+  
+  
+(*
+pred detach [i : Item, l : Label] {
+	l in i.labels
+	labels' = labels - i->l
+}
+*)
+
+  let detach (i:item) (l:labl)
+    requires { not mem(i,l) state.labels }
+    ensures  { state.labels = remove (i,l) (old state.labels) }
+  =
+    remove (i,l) state.labels    
+
+
+
+(*
+pred clear [i : Item] {
+	some i.labels
+	labels' = labels - i->Label
+}
+*)
+
+  let clear (i:item)
+    requires { exists l : labl . mem (i,l) state.labels}
+    ensures  { forall l : labl. not mem (i,l) state.labels}
+    ensures  { forall it : item, lb : labl . it <> i -> mem(it,lb) (old state.labels) <-> mem(it,lb) state.labels}
+  =
+    let aux = copy state.labels in
+    while not is_empty(aux) do
+      invariant { forall l:labl . mem (i,l) state.labels -> mem (i,l) aux }
+      invariant { forall j:item, l:labl . j <> i -> mem (j,l) state.labels <-> mem (j,l) (old state.labels) }
+      variant { cardinal(aux) }
+      let (x,y) = choose_and_remove(aux) in
+      if x = i then remove (x,y) state.labels;
+    done        
+
+
+end
