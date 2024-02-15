@@ -1,0 +1,7 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "Sensorização e Ambiente/org.eclipse.paho.client.mqttv3-1.2.5.jar",
+        "org.eclipse.paho.client.mqttv3-1.2.5.jar"
+    ]
+}

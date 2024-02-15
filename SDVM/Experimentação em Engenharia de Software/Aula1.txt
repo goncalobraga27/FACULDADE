@@ -1,0 +1,26 @@
+Gramática ----------> Programa : Pode ser dividida em árvore vazia ou uma AST 
+          Gerador de 
+            parsers 
+Como exemplo de gerador de parsers possuimos como por exemplo o LEX - YACC 
+
+Linguagem = Conjunto de frases = {"[]","[i]","[i,i]",...}
+Uma frase para pertencer a linguagem tem de respeitar as regras da mesma -> alfa € Liguagem 
+
+Especificação formal = G (T,N,S,P)
+
+T = Conjunto finito não vazio de simbolos terminais
+N = Conjunto finito não vazio de simbolos não terminais 
+S = axioma em simbolos terminais S € N 
+P = Conjunto predições, ou regras de re-escrita de G : P c N * (T u N)*
+
+
+Neste linguagem, temos :
+
+T = {'[',']','i','i'}
+N = { L, Is }
+S = L -> [Is] -> [i]
+P = { L -> '[' Is ']'
+        | '['']'
+      Is -> 'i'
+      Is -> 'i' ',' Is
+}
