@@ -116,3 +116,15 @@ pDigitos = f <$> (satisfy isDigit)
         where f x = [x]
               g x y = [x] ++ y
 
+{-
+    Double -> Sinal Digitos . Digitos
+    Sinal -> '+'
+            | '-'
+            |
+    Digitos -> dig 
+            | dig Digitos
+-}
+
+pPonto = symbol '.'
+pDouble = f <$> pInt <*> pPonto <*> pDigitos
+        where f x y z = x ++ (y:z)

@@ -5,8 +5,8 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
 public class MQTT_Test{
-    private final static String ADAFRUIT_USERNAME = "goncalobraga27";
-    private final static String ADAFRUIT_AIO_KEY = "aio_JzgF59V4LDzvPsbj46qL2BBGimPP";
+    private final static String ADAFRUIT_USERNAME = "";
+    private final static String ADAFRUIT_AIO_KEY = "";
 
     public static void main(String[]args){
         String topic = ADAFRUIT_USERNAME + "/Feeds/SensorFeed";
