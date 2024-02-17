@@ -47,10 +47,10 @@ succeed r inp = [(r,inp)]
 (<|>) :: Parser a -> Parser a -> Parser a 
 (p <|> q) inp = p inp ++ q inp 
 
-pX = token "While"
-    <|> token "For"
-    <|> token "while"
-    <|> token "for"
+pX = token' "While"
+    <|> token' "For"
+    <|> token' "while"
+    <|> token' "for"
 
 {-
    S -> A B 
@@ -104,8 +104,10 @@ pAs = f <$> symbol 'a'
             | dig Digitos
 -}
 
-pInt = f <$> pSinal <*> pDigitos
-    where f x y = x:y
+pInt :: Parser Int
+pInt =  f <$> pSinal <*> pDigitos
+   where f  '-' y = (read ('-':y))
+         f  _   y = read y
 
 pSinal = symbol '-'
        <|> symbol '+'
@@ -125,6 +127,44 @@ pDigitos = f <$> (satisfy isDigit)
             | dig Digitos
 -}
 
-pPonto = symbol '.'
-pDouble = f <$> pInt <*> pPonto <*> pDigitos
-        where f x y z = x ++ (y:z)
+oneOrMore p =  f <$> p
+            <|> g <$> p <*> (oneOrMore p)
+    where f x = [x]
+          g x y = x:y
+
+pString = f <$> symbol '\"' <*> zeroOrMore(satisfy (/='\"')) <*> symbol '\"'
+    where f a b c = b 
+
+zeroOrMore p = succeed []
+            <|> f <$> p <*> (zeroOrMore p)
+            where f x y = x : y
+
+optional p = f <$> p 
+           <|> succeed []
+           where f a = [a]
+
+pInt' = f <$> optional(pSinal) <*> oneOrMore (satisfy isDigit)
+     where f a b = a ++ b
+
+separatedBy p s =  f <$> p 
+                <|> g <$> p <*> s <*> (separatedBy p s)
+                where f x = [x]
+                      g x y z = x : z
+
+followedBy p s = succeed []
+                <|> f <$> p <*> s <*> ( followedBy p s)
+                where f a _ b = a : b 
+
+enclosedBy a c f =  g <$> a <*> c <*> f 
+                where g _ c _ = c 
+
+pListasHaskell = enclosedBy (symbol '[') (separatedBy pInt' (symbol ',')) (symbol ']')
+
+blocoCodigoC = enclosedBy (symbol '{') (followedBy pInt' (symbol ';')) (symbol '}')
+
+espacos = zeroOrMore (satisfy isSpace)
+
+symbol' a = (\x y -> x) <$> symbol a <*> espacos
+token' a = (\x y -> x) <$> token a <*> espacos
+satisfy' a = (\x y -> x) <$> satisfy a <*> espacos
+
