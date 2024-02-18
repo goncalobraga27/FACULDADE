@@ -13,7 +13,7 @@ data Inst = Atrib String Exp
 type BlocoC = [Inst] 
 data Exp = Const Int
          | Var String 
-         -- deriving Show
+         --deriving Show
 
 instance Show PicoC where 
       show (PicoC insts) = showInst insts 
@@ -22,13 +22,13 @@ instance Show PicoC where
                   showInst (x:xs) = show x ++ "; " ++ showInst xs 
 
 instance Show Inst where
-    show (Atrib var exp) = "Atrib " ++ var ++ " " ++ show exp
-    show (While exp bloco) = "While " ++ show exp ++ " " ++ show bloco
-    show (ITE exp bloco1 bloco2) = "ITE " ++ show exp ++ " " ++ show bloco1 ++ " " ++ show bloco2
+    show (Atrib var (Const n)) = var ++ " = " ++ show n
+    show (Atrib var (Var str)) = var ++ " " ++ show str
+    show (While (Var str) bloco) = "While(" ++ show str ++ "){" ++ show bloco ++ "}"
+    show (While (Const n) bloco) = "While(" ++ show n ++ "){" ++ show bloco ++ "}"
+    show (ITE (Var str) bloco1 bloco2) = "If (" ++ show str ++ ") then {" ++ show bloco1 ++ "} else {" ++ show bloco2 ++ "}; "
+    show (ITE (Const n) bloco1 bloco2) = "If (" ++ show n ++ ") then {" ++ show bloco1 ++ "} else {" ++ show bloco2 ++ "}; "
 
-instance Show Exp where
-    show (Const n) = "Const " ++ show n
-    show (Var str) = "Var " ++ str
 
 pTipo = token' "int"
       <|> token' "char"
