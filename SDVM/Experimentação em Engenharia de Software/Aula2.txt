@@ -1,0 +1,21 @@
+" 3 + a + 5 " :
+
+Exp -> Exp '+' Exp 
+    | Exp '*' Exp
+    | int 
+    | var 
+
+COMBINADORES DE PARSER :
+Limitações -> Não suportam recursividade à esquerda 
+
+Para retirar a recursividade á esquerda temos de desenvolver a seguinte gramática 
+
+Exp1 -> Exp0 '+' Exp1
+      | Exp0
+
+Exp0 -> Fator '*' Exp0
+      | Fator
+
+Fator -> int 
+      | var 
+      | '('Exp1')'

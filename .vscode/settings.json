@@ -1,6 +1,7 @@
 {
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "SI/Sensorização e Ambiente/org.eclipse.paho.client.mqttv3-1.2.5.jar"
+        "SI/Sensorização e Ambiente/org.eclipse.paho.client.mqttv3-1.2.5.jar",
+        "SI/Sensorização e Ambiente/Aula1/org.eclipse.paho.client.mqttv3-1.2.5.jar"
     ]
 }

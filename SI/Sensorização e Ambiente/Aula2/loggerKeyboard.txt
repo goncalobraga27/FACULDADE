@@ -1,0 +1,20 @@
+2024-02-20 19:28:02|AlphaNumeric Key Pressed|a
+2024-02-20 19:28:02|Key Released|'a'
+2024-02-20 19:28:14|AlphaNumeric Key Pressed|e
+2024-02-20 19:28:15|Key Released|'e'
+2024-02-20 19:28:21|AlphaNumeric Key Pressed|r
+2024-02-20 19:28:21|Key Released|'r'
+2024-02-20 19:28:34|Special Key Pressed|Key.esc
+2024-02-20 19:28:34|Key Released|Key.esc
+2024-02-20 19:29:11|AlphaNumeric Key Pressed|5
+2024-02-20 19:29:11|Key Released|'5'
+2024-02-20 19:38:02|AlphaNumeric Key Pressed|a
+2024-02-20 19:38:04|Key Released|'a'
+2024-02-20 19:38:32|AlphaNumeric Key Pressed|b
+2024-02-20 19:38:33|Key Released|'b'
+2024-02-20 21:22:43|AlphaNumeric Key Pressed|e
+2024-02-20 21:22:44|Key Released|'e'
+2024-02-20 21:23:07|AlphaNumeric Key Pressed|r
+2024-02-20 21:23:07|Key Released|'r'
+2024-02-20 21:30:47|AlphaNumeric Key Pressed|a
+2024-02-20 21:30:48|Key Released|'a'

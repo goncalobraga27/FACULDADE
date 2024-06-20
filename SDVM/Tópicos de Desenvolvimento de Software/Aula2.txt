@@ -1,0 +1,999 @@
+Ficha 2 ->
+Pergunta 3 : 
+To see the APIlevel :  getprop ro.build.version.sdk  -> 33
+To see the Androidversion : getprop ro.build.version.release -> 13 
+To see the model : getprop ro.product.model -> sdk_gphone64_arm64
+To see the ABI : getprop ro.product.cpu.abi -> arm64-v8a
+
+Pergunta 4 : 
+To see the current brightness level : adb shell settings get system screen_brightness -> 102 
+To see the bluetooth on : adb shell settings get global bluetooth_on -> 1 
+
+Quando alterei o nivel de brilho e o bluetooth para off, os valores foram alterados para 29 e 0, respetivamente
+                                                ||
+                                                \/
+                                Foram utilizados os mesmos comandos para medir os novos valores 
+
+Pergunta 5 :
+Os packages (apps) existentes no emulador são os seguintes :
+
+package:com.android.systemui.auto_generated_rro_vendor__
+package:com.google.android.providers.media.module
+package:com.google.android.overlay.permissioncontroller
+package:com.google.android.overlay.googlewebview
+package:com.android.calllogbackup
+package:com.android.carrierconfig.auto_generated_rro_vendor__
+package:com.android.internal.emulation.pixel_3_xl
+package:com.breel.wallpapers18
+package:com.android.providers.contacts
+package:com.android.internal.emulation.pixel_4a
+package:com.android.dreams.basic
+package:com.android.companiondevicemanager
+package:com.android.cts.priv.ctsshim
+package:com.google.android.calendar
+package:com.google.android.networkstack.tethering.emulator
+package:com.google.android.contacts
+package:com.android.mms.service
+package:com.google.android.cellbroadcastreceiver
+package:com.android.providers.downloads
+package:com.android.bluetoothmidiservice
+package:com.google.android.printservice.recommendation
+package:com.google.android.captiveportallogin
+package:com.android.storagemanager.auto_generated_rro_product__
+package:com.google.android.networkstack
+package:com.google.android.overlay.googleconfig
+package:com.android.keychain
+package:com.google.android.tag
+package:com.android.internal.emulation.pixel_2_xl
+package:android.auto_generated_rro_vendor__
+package:com.google.android.apps.wellbeing
+package:com.android.nfc.auto_generated_rro_product__
+package:com.android.emulator.multidisplay
+package:com.android.shell
+package:com.google.android.ims
+package:com.google.android.adservices.api
+package:com.google.android.wifi.dialog
+package:com.google.android.apps.wallpaper.nexus
+package:com.android.inputdevices
+package:com.google.android.ondevicepersonalization.services
+package:com.google.android.apps.customization.pixel
+package:com.example.aula2
+package:com.android.bookmarkprovider
+package:com.google.android.onetimeinitializer
+package:com.google.android.permissioncontroller
+package:com.android.sharedstoragebackup
+package:com.android.imsserviceentitlement
+package:com.android.providers.media
+package:com.android.providers.calendar
+package:com.android.providers.blockednumber
+package:com.google.android.documentsui
+package:com.android.carrierconfig.auto_generated_rro_product__
+package:com.android.proxyhandler
+package:com.android.systemui.emulation.pixel_3a
+package:com.android.emergency.auto_generated_rro_product__
+package:com.android.managedprovisioning
+package:com.android.emergency
+package:com.android.managedprovisioning.auto_generated_rro_product__
+package:com.google.android.gm
+package:com.android.carrierdefaultapp
+package:com.android.backupconfirm
+package:com.google.android.hotspot2.osulogin
+package:com.android.nfc
+package:com.google.android.deskclock
+package:com.android.mtp
+package:com.android.systemui.emulation.pixel_4a
+package:com.google.android.gsf
+package:com.google.android.overlay.pixelconfigcommon
+package:com.android.internal.display.cutout.emulation.double
+package:com.android.theme.font.notoserifsource
+package:com.android.traceur.auto_generated_rro_product__
+package:com.google.android.settings.intelligence
+package:com.android.systemui.emulation.pixel_3
+package:com.android.systemui
+package:com.android.wallpapercropper
+package:com.android.internal.emulation.pixel_4
+package:com.android.internal.emulation.pixel_5
+package:com.android.providers.contacts.auto_generated_rro_product__
+package:com.google.android.dialer
+package:com.android.systemui.emulation.pixel_5
+package:com.android.internal.emulation.pixel_3
+package:com.android.systemui.emulation.pixel_4
+package:com.android.internal.systemui.navbar.gestural
+package:com.google.android.apps.nexuslauncher
+package:com.google.mainline.adservices
+package:com.example.myapplication3
+package:com.google.android.apps.wallpaper
+package:com.google.android.webview
+package:com.google.android.sdksandbox
+package:com.android.internal.emulation.pixel_3a
+package:com.android.wallpaperbackup
+package:com.google.android.cellbroadcastservice
+package:com.android.internal.systemui.navbar.twobutton
+package:com.android.internal.systemui.navbar.threebutton
+package:com.android.egg
+package:com.android.localtransport
+package:android
+package:com.android.camera2
+package:com.android.systemui.emulation.pixel_3a_xl
+package:com.android.providers.settings.auto_generated_rro_product__
+package:com.google.android.soundpicker
+package:com.google.android.packageinstaller
+package:com.android.se
+package:com.android.pacprocessor
+package:com.google.android.connectivity.resources.goldfish.overlay
+package:com.google.android.safetycenter.resources
+package:com.google.android.apps.youtube.music
+package:com.example.sa_aulas
+package:com.android.stk
+package:com.android.internal.display.cutout.emulation.hole
+package:com.android.settings
+package:com.android.bips
+package:com.google.android.partnersetup
+package:com.android.internal.systemui.navbar.gestural_narrow_back
+package:com.android.internal.display.cutout.emulation.tall
+package:com.google.android.networkstack.tethering
+package:com.google.android.projection.gearhead
+package:com.android.cameraextensions
+package:com.google.android.bluetooth.services
+package:com.google.android.odad
+package:com.android.carrierconfig
+package:com.android.internal.systemui.navbar.gestural_wide_back
+package:com.google.android.ext.shared
+package:com.google.android.feedback
+package:com.android.remoteprovisioner
+package:com.android.chrome
+package:com.google.android.apps.maps
+package:com.google.android.as
+package:android.auto_generated_rro_product__
+package:com.android.musicfx
+package:com.android.server.telecom.auto_generated_rro_product__
+package:com.google.android.inputmethod.latin
+package:com.android.providers.settings.auto_generated_rro_vendor__
+package:com.google.android.systemui.gxoverlay
+package:com.android.providers.downloads.ui
+package:com.google.android.wifi.resources
+package:com.android.ons
+package:com.android.intentresolver
+package:com.google.android.apps.docs
+package:com.google.android.nearby.halfsheet
+package:com.android.phone.auto_generated_rro_vendor__
+package:com.android.certinstaller
+package:com.google.android.setupwizard
+package:com.google.android.apps.restore
+package:com.android.simappdialog
+package:com.android.providers.telephony
+package:com.android.wallpaper.livepicker
+package:com.android.internal.display.cutout.emulation.emu01
+package:com.android.internal.display.cutout.emulation.waterfall
+package:com.android.settings.auto_generated_rro_product__
+package:com.android.providers.settings
+package:com.android.systemui.emulation.pixel_3_xl
+package:com.android.phone
+package:com.android.internal.systemui.navbar.gestural_extra_wide_back
+package:com.android.internal.emulation.pixel_4_xl
+package:com.android.traceur
+package:com.google.android.as.oss
+package:com.google.android.apps.messaging
+package:com.android.internal.emulation.pixel_3a_xl
+package:com.android.location.fused
+package:com.android.vpndialogs
+package:com.android.uwb.resources
+package:com.android.cellbroadcastreceiver
+package:com.android.systemui.plugin.globalactions.wallet
+package:com.google.android.tts
+package:com.android.systemui.emulation.pixel_4_xl
+package:com.google.android.googlequicksearchbox
+package:com.google.android.modulemetadata
+package:com.android.phone.auto_generated_rro_product__
+package:com.android.htmlviewer
+package:com.android.vending
+package:com.google.android.ext.services
+package:com.google.android.configupdater
+package:com.google.android.gms.supervision
+package:com.android.providers.userdictionary
+package:com.android.cts.ctsshim
+package:com.google.android.apps.photos
+package:com.example.aula2_tds
+package:com.android.bluetooth
+package:com.google.android.markup
+package:com.android.emulator.radio.config
+package:com.android.internal.display.cutout.emulation.corner
+package:com.google.android.gms
+package:com.android.storagemanager
+package:com.google.android.sdksetup
+package:com.android.printspooler
+package:com.android.systemui.auto_generated_rro_product__
+package:com.android.providers.partnerbookmarks
+package:com.android.soundpicker
+package:com.google.mainline.telemetry
+package:com.android.dynsystem
+package:com.android.providers.telephony.auto_generated_rro_product__
+package:com.google.android.connectivity.resources
+package:com.android.bips.auto_generated_rro_product__
+package:com.google.android.youtube
+package:com.android.simappdialog.auto_generated_rro_product__
+package:com.android.externalstorage
+package:com.android.server.telecom
+(base) goncalobraga@Air-de-Goncalo Tópicos de Desenvolvimento de Software % clear
+(base) goncalobraga@Air-de-Goncalo Tópicos de Desenvolvimento de Software % adb shell pm list packages
+package:com.android.systemui.auto_generated_rro_vendor__
+package:com.google.android.providers.media.module
+package:com.google.android.overlay.permissioncontroller
+package:com.google.android.overlay.googlewebview
+package:com.android.calllogbackup
+package:com.android.carrierconfig.auto_generated_rro_vendor__
+package:com.android.internal.emulation.pixel_3_xl
+package:com.breel.wallpapers18
+package:com.android.providers.contacts
+package:com.android.internal.emulation.pixel_4a
+package:com.android.dreams.basic
+package:com.android.companiondevicemanager
+package:com.android.cts.priv.ctsshim
+package:com.google.android.calendar
+package:com.google.android.networkstack.tethering.emulator
+package:com.google.android.contacts
+package:com.android.mms.service
+package:com.google.android.cellbroadcastreceiver
+package:com.android.providers.downloads
+package:com.android.bluetoothmidiservice
+package:com.google.android.printservice.recommendation
+package:com.google.android.captiveportallogin
+package:com.android.storagemanager.auto_generated_rro_product__
+package:com.google.android.networkstack
+package:com.google.android.overlay.googleconfig
+package:com.android.keychain
+package:com.google.android.tag
+package:com.android.internal.emulation.pixel_2_xl
+package:android.auto_generated_rro_vendor__
+package:com.google.android.apps.wellbeing
+package:com.android.nfc.auto_generated_rro_product__
+package:com.android.emulator.multidisplay
+package:com.android.shell
+package:com.google.android.ims
+package:com.google.android.adservices.api
+package:com.google.android.wifi.dialog
+package:com.google.android.apps.wallpaper.nexus
+package:com.android.inputdevices
+package:com.google.android.ondevicepersonalization.services
+package:com.google.android.apps.customization.pixel
+package:com.example.aula2
+package:com.android.bookmarkprovider
+package:com.google.android.onetimeinitializer
+package:com.google.android.permissioncontroller
+package:com.android.sharedstoragebackup
+package:com.android.imsserviceentitlement
+package:com.android.providers.media
+package:com.android.providers.calendar
+package:com.android.providers.blockednumber
+package:com.google.android.documentsui
+package:com.android.carrierconfig.auto_generated_rro_product__
+package:com.android.proxyhandler
+package:com.android.systemui.emulation.pixel_3a
+package:com.android.emergency.auto_generated_rro_product__
+package:com.android.managedprovisioning
+package:com.android.emergency
+package:com.android.managedprovisioning.auto_generated_rro_product__
+package:com.google.android.gm
+package:com.android.carrierdefaultapp
+package:com.android.backupconfirm
+package:com.google.android.hotspot2.osulogin
+package:com.android.nfc
+package:com.google.android.deskclock
+package:com.android.mtp
+package:com.android.systemui.emulation.pixel_4a
+package:com.google.android.gsf
+package:com.google.android.overlay.pixelconfigcommon
+package:com.android.internal.display.cutout.emulation.double
+package:com.android.theme.font.notoserifsource
+package:com.android.traceur.auto_generated_rro_product__
+package:com.google.android.settings.intelligence
+package:com.android.systemui.emulation.pixel_3
+package:com.android.systemui
+package:com.android.wallpapercropper
+package:com.android.internal.emulation.pixel_4
+package:com.android.internal.emulation.pixel_5
+package:com.android.providers.contacts.auto_generated_rro_product__
+package:com.google.android.dialer
+package:com.android.systemui.emulation.pixel_5
+package:com.android.internal.emulation.pixel_3
+package:com.android.systemui.emulation.pixel_4
+package:com.android.internal.systemui.navbar.gestural
+package:com.google.android.apps.nexuslauncher
+package:com.google.mainline.adservices
+package:com.example.myapplication3
+package:com.google.android.apps.wallpaper
+package:com.google.android.webview
+package:com.google.android.sdksandbox
+package:com.android.internal.emulation.pixel_3a
+package:com.android.wallpaperbackup
+package:com.google.android.cellbroadcastservice
+package:com.android.internal.systemui.navbar.twobutton
+package:com.android.internal.systemui.navbar.threebutton
+package:com.android.egg
+package:com.android.localtransport
+package:android
+package:com.android.camera2
+package:com.android.systemui.emulation.pixel_3a_xl
+package:com.android.providers.settings.auto_generated_rro_product__
+package:com.google.android.soundpicker
+package:com.google.android.packageinstaller
+package:com.android.se
+package:com.android.pacprocessor
+package:com.google.android.connectivity.resources.goldfish.overlay
+package:com.google.android.safetycenter.resources
+package:com.google.android.apps.youtube.music
+package:com.example.sa_aulas
+package:com.android.stk
+package:com.android.internal.display.cutout.emulation.hole
+package:com.android.settings
+package:com.android.bips
+package:com.google.android.partnersetup
+package:com.android.internal.systemui.navbar.gestural_narrow_back
+package:com.android.internal.display.cutout.emulation.tall
+package:com.google.android.networkstack.tethering
+package:com.google.android.projection.gearhead
+package:com.android.cameraextensions
+package:com.google.android.bluetooth.services
+package:com.google.android.odad
+package:com.android.carrierconfig
+package:com.android.internal.systemui.navbar.gestural_wide_back
+package:com.google.android.ext.shared
+package:com.google.android.feedback
+package:com.android.remoteprovisioner
+package:com.android.chrome
+package:com.google.android.apps.maps
+package:com.google.android.as
+package:android.auto_generated_rro_product__
+package:com.android.musicfx
+package:com.android.server.telecom.auto_generated_rro_product__
+package:com.google.android.inputmethod.latin
+package:com.android.providers.settings.auto_generated_rro_vendor__
+package:com.google.android.systemui.gxoverlay
+package:com.android.providers.downloads.ui
+package:com.google.android.wifi.resources
+package:com.android.ons
+package:com.android.intentresolver
+package:com.google.android.apps.docs
+package:com.google.android.nearby.halfsheet
+package:com.android.phone.auto_generated_rro_vendor__
+package:com.android.certinstaller
+package:com.google.android.setupwizard
+package:com.google.android.apps.restore
+package:com.android.simappdialog
+package:com.android.providers.telephony
+package:com.android.wallpaper.livepicker
+package:com.android.internal.display.cutout.emulation.emu01
+package:com.android.internal.display.cutout.emulation.waterfall
+package:com.android.settings.auto_generated_rro_product__
+package:com.android.providers.settings
+package:com.android.systemui.emulation.pixel_3_xl
+package:com.android.phone
+package:com.android.internal.systemui.navbar.gestural_extra_wide_back
+package:com.android.internal.emulation.pixel_4_xl
+package:com.android.traceur
+package:com.google.android.as.oss
+package:com.google.android.apps.messaging
+package:com.android.internal.emulation.pixel_3a_xl
+package:com.android.location.fused
+package:com.android.vpndialogs
+package:com.android.uwb.resources
+package:com.android.cellbroadcastreceiver
+package:com.android.systemui.plugin.globalactions.wallet
+package:com.google.android.tts
+package:com.android.systemui.emulation.pixel_4_xl
+package:com.google.android.googlequicksearchbox
+package:com.google.android.modulemetadata
+package:com.android.phone.auto_generated_rro_product__
+package:com.android.htmlviewer
+package:com.android.vending
+package:com.google.android.ext.services
+package:com.google.android.configupdater
+package:com.google.android.gms.supervision
+package:com.android.providers.userdictionary
+package:com.android.cts.ctsshim
+package:com.google.android.apps.photos
+package:com.example.aula2_tds
+package:com.android.bluetooth
+package:com.google.android.markup
+package:com.android.emulator.radio.config
+package:com.android.internal.display.cutout.emulation.corner
+package:com.google.android.gms
+package:com.android.storagemanager
+package:com.google.android.sdksetup
+package:com.android.printspooler
+package:com.android.systemui.auto_generated_rro_product__
+package:com.android.providers.partnerbookmarks
+package:com.android.soundpicker
+package:com.google.mainline.telemetry
+package:com.android.dynsystem
+package:com.android.providers.telephony.auto_generated_rro_product__
+package:com.google.android.connectivity.resources
+package:com.android.bips.auto_generated_rro_product__
+package:com.google.android.youtube
+package:com.android.simappdialog.auto_generated_rro_product__
+package:com.android.externalstorage
+package:com.android.server.telecom
+
+
+Para todos os packages que possuam package:com.android é porque são nativos ao telemóvel 
+Para todos os packages que possuam package:com.google é porque são do Google 
+Para todos os packages que possuam package:com.example é porque pertencem ao utilizador e foram instalados por estes 
+
+Pergunta 6 :
+
+system         367     1 10842940  2208 0                   0 S android.hidl.allocator@1.0-service
+audioserver    368     1 11162668  6632 0                   0 S android.hardware.audio.service
+system         369     1 10802632  3136 0                   0 S android.hardware.authsecret@1.0-service
+bluetooth      370     1 10852000  3712 0                   0 S android.hardware.bluetooth@1.1-service.btlinux
+cameraserver   371     1 11157068  6620 0                   0 S android.hardware.camera.provider@2.4-service_64
+system         372     1 11005492  5772 0                   0 S android.hardware.camera.provider@2.7-service-google
+media          373     1 10821716  3332 0                   0 S android.hardware.cas@1.2-service
+context_hub    374     1 10890872  3292 0                   0 S android.hardware.contexthub@1.1-service.mock
+media          375     1 10829708  4152 0                   0 S android.hardware.drm-service.clearkey
+media          376     1 10826664  7596 0                   0 S android.hardware.drm-service.widevine
+media          377     1 10921412  3788 0                   0 S android.hardware.drm@1.0-service
+media          378     1 10893952  4264 0                   0 S android.hardware.drm@1.4-service.clearkey
+system         379     1 10826464  3200 0                   0 S android.hardware.gatekeeper@1.0-service.software
+system         380     1 10969864  9200 0                   0 S android.hardware.graphics.allocator@3.0-service
+system         381     1 11219524 19264 0                   0 S android.hardware.graphics.composer@2.4-service
+system         384     1 10825772  3572 0                   0 S android.hardware.health@2.1-service
+media          385     1 11025120  6568 0                   0 S android.hardware.media.c2@1.0-service-goldfish
+system         386     1 10877064  5040 0                   0 S android.hardware.neuralnetworks@1.3-service-sample-all
+system         387     1 10924264  5368 0                   0 S android.hardware.neuralnetworks@1.3-service-sample-limited
+system         388     1 10794536  3760 0                   0 S android.hardware.power.stats@1.0-service.mock
+system         389     1 10871060  4404 0                   0 S android.hardware.sensors@2.1-service.multihal
+system         394     1 10847860  3320 0                   0 S android.hardware.thermal@2.0-service.mock
+system         395     1 10830388  3324 0                   0 S android.hardware.usb@1.0-service
+wifi           396     1 10961404  5488 0                   0 S android.hardware.wifi@1.0-service
+nobody         397     1 10960000  3796 0                   0 S android.hardware.identity-service.example
+nobody         399     1 10847968  3676 0                   0 S android.hardware.lights-service.example
+nobody         400     1 10841852  3840 0                   0 S android.hardware.power-service.example
+system         401     1 10837740  3328 0                   0 S android.hardware.rebootescrow-service.default
+nobody         402     1 10852156  3788 0                   0 S android.hardware.vibrator-service.example
+
+Estas são as aplicações que estão em execução no telemóvel 
+
+O comando utilizado foi este : adb shell ps
+
+Pergunta 7 :
+
+Statistics since last charge:
+  System starts: 2, currently on battery: true
+  Estimated battery capacity: 1000 mAh
+  Last learned battery capacity: 3000 mAh
+  Min learned battery capacity: 3000 mAh
+  Max learned battery capacity: 3000 mAh
+  Time on battery: 8h 26m 26s 56ms (100.0%) realtime, 8h 26m 26s 56ms (100.0%) uptime
+  Time on battery screen off: 19s 29ms (0.1%) realtime, 19s 29ms (0.1%) uptime
+  Time on battery screen doze: 0ms (0.0%)
+  Total run time: 8h 26m 38s 565ms realtime, 8h 26m 38s 565ms uptime
+  Discharge: 0 mAh
+  Screen off discharge: 0 mAh
+  Screen doze discharge: 0 mAh
+  Screen on discharge: 0 mAh
+  Device light doze discharge: 0 mAh
+  Device deep doze discharge: 0 mAh
+  Start clock time: 2024-02-26-21-30-33
+  Screen on: 8h 26m 7s 27ms (99.9%) 3x, Interactive: 8h 26m 6s 106ms (99.9%)
+  Screen brightnesses:
+    dark 38m 37s 369ms (7.6%)
+    dim 244ms (0.0%)
+    medium 7h 47m 29s 407ms (92.4%)
+    bright 7ms (0.0%)
+  Connectivity changes: 11
+  Total full wakelock time: 25s 724ms
+  Total partial wakelock time: 498ms
+
+  CONNECTIVITY POWER SUMMARY START
+  Logging duration for connectivity statistics: 8h 26m 26s 56ms 
+  Cellular Statistics:
+     Cellular kernel active time: 47s 330ms (0.2%)
+     Cellular Sleep time:  0ms (0.0%)
+     Cellular Idle time:   7h 12m 39s 80ms (85.4%)
+     Cellular Rx time:     0ms (0.0%)
+     Cellular Tx time:     
+       less than 0dBm:  0ms (0.0%)
+       0dBm to 8dBm:  0ms (0.0%)
+       8dBm to 15dBm:  0ms (0.0%)
+       15dBm to 20dBm:  0ms (0.0%)
+       above 20dBm:  0ms (0.0%)
+     Active Cellular Radio Access Technology Breakdown:
+       Other:
+         All frequencies:
+           Signal Strength Time:
+             good:     38s 365ms (81.1%)
+             great:    8s 965ms (18.9%)
+           Tx Time:
+           Rx Time: 0ms (0.0%)
+     Cellular data received: 30.62MB
+     Cellular data sent: 294.54KB
+     Cellular packets received: 25565
+     Cellular packets sent: 3622
+     Cellular Radio Access Technology:
+       oos 3h 56m 55s 923ms (46.8%) 
+       hspa 4h 28m 40s 275ms (53.1%) 
+     Cellular Rx signal strength (RSRP):
+       very poor (less than -128dBm):  27s 950ms (0.1%) 
+       moderate (-118dBm to -108dBm):  1h 51m 41s 345ms (22.1%) 
+       good (-108dBm to -98dBm):  1h 52m 39s 621ms (22.2%) 
+       great (greater than -98dBm):  4h 40m 36s 524ms (55.4%) 
+  Wifi Statistics:
+     Wifi kernel active time: 2h 35m 32s 264ms (30.7%)
+     WiFi Scan time:  0ms (0.0%)
+     WiFi Sleep time:  8h 26m 26s 58ms (100.0%)
+     WiFi Idle time:   0ms (0.0%)
+     WiFi Rx time:     0ms (0.0%)
+     WiFi Tx time:     0ms (0.0%)
+     Wifi data received: 0B
+     Wifi data sent: 0B
+     Wifi packets received: 0
+     Wifi packets sent: 0
+     Wifi states:
+       sta 8h 25m 8s 311ms (99.7%) 
+     Wifi supplicant states:
+       scanning 3s 692ms (0.0%) 
+       authenticating 28ms (0.0%) 
+       associating 269ms (0.0%) 
+       associated 467ms (0.0%) 
+       completed 8h 25m 18s 571ms (99.8%) 
+     Wifi Rx signal strength (RSSI):
+         great (greater than -55dBm): 8h 25m 18s 557ms (99.8%) 
+  GPS Statistics:
+     GPS signal quality (Top 4 Average CN0):
+      poor (less than 20 dBHz): 0ms (0.0%) 
+      good (greater than 20 dBHz): 0ms (0.0%) 
+  CONNECTIVITY POWER SUMMARY END
+
+  Bluetooth total received: 0B, sent: 0B
+  Bluetooth scan time: 8h 24m 25s 333ms 
+     Bluetooth Idle time:   0ms (0.0%)
+     Bluetooth Rx time:     0ms (0.0%)
+     Bluetooth Tx time:     0ms (0.0%)
+
+  Device battery use since last full charge
+    Amount discharged (lower bound): 0
+    Amount discharged (upper bound): 0
+    Amount discharged while screen on: 0
+    Amount discharged while screen off: 0
+    Amount discharged while screen doze: 0
+
+  Estimated power use (mAh):
+    Capacity: 3000, Computed drain: 0, actual drain: 0
+    Global
+      screen: 0.642 apps: 0.642 duration: 8h 26m 7s 30ms 
+      cpu: 0.0482 apps: 0.0482
+      audio: 0.0000282 apps: 0.0000282 duration: 1s 14ms 
+      mobile_radio: 0.844 apps: 0.000657 duration: 47s 330ms 
+      sensors: 25.3 apps: 25.3
+      wifi: 0.00708 apps: 0.00708
+      wakelock: 0.0000137 apps: 0.0000137
+      idle: 0.844 apps: 0 duration: 8h 26m 26s 59ms 
+    UID 1000: 25.3 fg: 0.0000373 cached: 0.00000681 ( cpu=0.0186 (24m 19s 87ms) cpu:fg=0.0000373 (1s 342ms) cpu:cached=0.00000681 (245ms) audio=0.0000282 (1s 14ms) sensors=25.3 (8h 25m 48s 89ms) wifi=0.000104 wakelock=0.00000031 (11ms) ) 
+    UID u0a140: 0.368 fg: 0.000794 ( screen=0.368 (4h 49m 12s 913ms) cpu=0.000794 (1m 14s 2ms) cpu:fg=0.000794 (28s 570ms) ) 
+    UID u0a163: 0.199 fg: 0.0000138 cached: 0.00000936 ( screen=0.199 (2h 36m 27s 887ms) cpu=0.0000233 (4s 402ms) cpu:fg=0.0000138 (496ms) cpu:cached=0.00000936 (337ms) ) 
+    UID u0a165: 0.0572 fg: 0.0000208 cached: 0.00000006 ( screen=0.0571 (44m 56s 594ms) cpu=0.0000468 (5s 51ms) cpu:fg=0.0000208 (747ms) cpu:cached=0.00000006 (2ms) ) 
+    UID u0a108: 0.0200 fg: 0.00454 fgs: 0.0000148 cached: 0.00000014 ( cpu=0.00431 (6m 45s 825ms) cpu:fg=0.00429 (2m 34s 610ms) cpu:fgs=0.0000143 (514ms) cpu:cached=0.00000014 (5ms) mobile_radio=0.000247 (8s 874ms) mobile_radio:fg=0.000246 mobile_radio:fgs=0.00000050 sensors=0.0154 (18s 523ms) wakelock=0.00000414 (149ms) ) 
+    UID u0a162: 0.0170 fg: 0.0000214 cached: 0.00000178 ( screen=0.0166 (13m 2s 701ms) cpu=0.000201 (20s 80ms) cpu:fg=0.0000214 (772ms) cpu:cached=0.00000178 (64ms) sensors=0.000198 (238ms) ) 
+    UID 0: 0.00905 ( cpu=0.00905 (8m 46s 71ms) ) 
+    UID 1010: 0.00729 ( cpu=0.000391 (22s 931ms) wifi=0.00690 ) 
+    UID 2000: 0.00383 bg: 0.00000003 cached: 0.000161 ( cpu=0.00383 (3m 49s 547ms) cpu:bg=0.00000003 (1ms) cpu:cached=0.000161 (5s 778ms) ) 
+    UID u0a104: 0.00162 fg: 0.00000464 bg: 0.000177 fgs: 0.0000452 cached: 0.00103 ( screen=0.000261 (12s 309ms) cpu=0.00136 (2m 8s 534ms) cpu:fg=0.00000464 (167ms) cpu:bg=0.000177 (6s 368ms) cpu:fgs=0.0000452 (1s 628ms) cpu:cached=0.00103 (37s 114ms) wakelock=0.00000072 (26ms) ) 
+    UID u0a145: 0.00162 fg: 0.00162 ( cpu=0.00162 (2m 7s 472ms) cpu:fg=0.00162 (58s 166ms) ) 
+    UID u0a164: 0.00117 ( screen=0.00117 (55s 235ms) cpu=0 (2s 822ms) ) 
+    UID u0a110: 0.00103 fg: 0.00103 ( cpu=0.00103 (1m 58s 46ms) cpu:fg=0.00103 (36s 972ms) wakelock=0.00000147 (53ms) ) 
+    UID 1073: 0.000826 fg: 0.000825 ( cpu=0.000415 (24s 438ms) cpu:fg=0.000414 (14s 920ms) mobile_radio=0.000411 (14s 790ms) mobile_radio:fg=0.000411 ) 
+    UID u0a117: 0.000723 fg: 0.00000003 bg: 0.00000064 cached: 0.000553 ( cpu=0.000723 (58s 143ms) cpu:fg=0.00000003 (1ms) cpu:bg=0.00000064 (23ms) cpu:cached=0.000553 (19s 912ms) ) 
+    UID u0a107: 0.000717 fg: 0.000706 bg: 0.00000122 fgs: 0.00000222 cached: 0.00000556 ( cpu=0.000715 (1m 7s 910ms) cpu:fg=0.000706 (25s 420ms) cpu:bg=0.00000122 (44ms) cpu:fgs=0.00000222 (80ms) cpu:cached=0.00000556 (200ms) wakelock=0.00000222 (80ms) ) 
+    UID 1001: 0.000524 fg: 0.000523 ( cpu=0.000523 (43s 657ms) cpu:fg=0.000523 (18s 828ms) wakelock=0.00000072 (26ms) ) 
+    UID u0a131: 0.000460 bg: 0.00000025 cached: 0.000284 ( cpu=0.000460 (38s 287ms) cpu:bg=0.00000025 (9ms) cpu:cached=0.000284 (10s 208ms) ) 
+    UID u0a106: 0.000429 fg: 0.0000178 bg: 0.00000078 cached: 0.000321 ( cpu=0.000429 (47s 442ms) cpu:fg=0.0000178 (640ms) cpu:bg=0.00000078 (28ms) cpu:cached=0.000321 (11s 546ms) ) 
+    UID u0a102: 0.000403 fg: 0.000330 ( cpu=0.000330 (39s 252ms) cpu:fg=0.000330 (11s 883ms) wifi=0.0000698 wakelock=0.00000267 (96ms) ) 
+    UID 1041: 0.000285 ( cpu=0.000285 (19s 616ms) ) 
+    UID u0a109: 0.000238 bg: 0.0000249 cached: 0.000144 ( cpu=0.000238 (22s 312ms) cpu:bg=0.0000249 (897ms) cpu:cached=0.000144 (5s 197ms) ) 
+    UID u0a121: 0.000216 bg: 0.00000022 cached: 0.000142 ( cpu=0.000216 (20s 975ms) cpu:bg=0.00000022 (8ms) cpu:cached=0.000142 (5s 96ms) ) 
+    UID u0a119: 0.000187 fg: 0.00000083 bg: 0.00000017 cached: 0.000127 ( cpu=0.000187 (18s 641ms) cpu:fg=0.00000083 (30ms) cpu:bg=0.00000017 (6ms) cpu:cached=0.000127 (4s 569ms) ) 
+    UID u0a129: 0.000186 fg: 0.00000617 bg: 0.00000008 cached: 0.000158 ( cpu=0.000186 (15s 913ms) cpu:fg=0.00000617 (222ms) cpu:bg=0.00000008 (3ms) cpu:cached=0.000158 (5s 692ms) ) 
+    UID u0a118: 0.000184 bg: 0.00000003 cached: 0.0000865 ( cpu=0.000184 (18s 772ms) cpu:bg=0.00000003 (1ms) cpu:cached=0.0000865 (3s 113ms) ) 
+    UID u0a132: 0.000177 bg: 0.000176 fgs: 0.00000139 ( cpu=0.000177 (21s 282ms) cpu:bg=0.000176 (6s 337ms) cpu:fgs=0.00000139 (50ms) ) 
+    UID u0a154: 0.000168 fg: 0.0000367 cached: 0.000127 ( cpu=0.000168 (20s 560ms) cpu:fg=0.0000367 (1s 322ms) cpu:cached=0.000127 (4s 588ms) ) 
+    UID u0a134: 0.000158 ( screen=0.000158 (7s 461ms) cpu=0 (258ms) ) 
+    UID u0a116: 0.000146 fg: 0.00000042 bg: 0.00000008 cached: 0.0000934 ( cpu=0.000146 (13s 507ms) cpu:fg=0.00000042 (15ms) cpu:bg=0.00000008 (3ms) cpu:cached=0.0000934 (3s 364ms) ) 
+    UID 1066: 0.000127 ( cpu=0.000127 (22s 703ms) ) 
+    UID 1036: 0.000120 ( cpu=0.000120 (16s 983ms) ) 
+    UID u0a58: 0.000109 fg: 0.00000192 bg: 0.00000100 cached: 0.0000815 ( cpu=0.000109 (9s 754ms) cpu:fg=0.00000192 (69ms) cpu:bg=0.00000100 (36ms) cpu:cached=0.0000815 (2s 934ms) ) 
+    UID u0a60: 0.000105 fg: 0.00000478 bg: 0.00000253 cached: 0.0000651 ( cpu=0.000105 (10s 824ms) cpu:fg=0.00000478 (172ms) cpu:bg=0.00000253 (91ms) cpu:cached=0.0000651 (2s 342ms) ) 
+    UID u0a96: 0.000103 fg: 0.00000167 cached: 0.0000757 ( cpu=0.000103 (14s 909ms) cpu:fg=0.00000167 (60ms) cpu:cached=0.0000757 (2s 724ms) ) 
+    UID u0a141: 0.000102 fg: 0.00000361 cached: 0.0000309 ( cpu=0.000102 (17s 949ms) cpu:fg=0.00000361 (130ms) cpu:cached=0.0000309 (1s 113ms) ) 
+    UID u0a125: 0.0000937 cached: 0.0000592 ( cpu=0.0000937 (11s 596ms) cpu:cached=0.0000592 (2s 132ms) ) 
+    UID 1002: 0.0000844 fg: 0.0000780 cached: 0.00000047 ( cpu=0.0000837 (8s 232ms) cpu:fg=0.0000780 (2s 808ms) cpu:cached=0.00000047 (17ms) wakelock=0.00000072 (26ms) ) 
+    UID u0a105: 0.0000737 fg: 0.00000036 fgs: 0.00000736 cached: 0.0000123 ( screen=0.0000367 (1s 735ms) cpu=0.0000369 (5s 862ms) cpu:fg=0.00000036 (13ms) cpu:fgs=0.00000736 (265ms) cpu:cached=0.0000123 (442ms) ) 
+    UID 1069: 0.0000732 ( cpu=0.0000732 (9s 519ms) ) 
+    UID u0a150: 0.0000611 fg: 0.0000604 ( cpu=0.0000604 (9s 74ms) cpu:fg=0.0000604 (2s 174ms) wakelock=0.00000072 (26ms) ) 
+    UID u0a133: 0.0000594 cached: 0.0000438 ( cpu=0.0000594 (6s 518ms) cpu:cached=0.0000438 (1s 577ms) ) 
+    UID u0a95: 0.0000583 fg: 0.0000583 ( cpu=0.0000583 (6s 856ms) cpu:fg=0.0000583 (2s 100ms) ) 
+    UID u0a136: 0.0000583 cached: 0.0000275 ( cpu=0.0000583 (5s 996ms) cpu:cached=0.0000275 (991ms) ) 
+    UID 1021: 0.0000554 ( cpu=0.0000554 (3s 836ms) ) 
+    UID 1003: 0.0000489 ( cpu=0.0000489 (8s 646ms) ) 
+    UID 1047: 0.0000428 ( cpu=0.0000428 (5s 988ms) ) 
+    UID 1013: 0.0000416 ( cpu=0.0000416 (4s 459ms) ) 
+    UID u0a68: 0.0000401 fg: 0.00000103 cached: 0.0000313 ( cpu=0.0000401 (4s 32ms) cpu:fg=0.00000103 (37ms) cpu:cached=0.0000313 (1s 126ms) ) 
+    UID 9999: 0.0000393 ( cpu=0.0000393 (2s 377ms) ) 
+    UID u0a101: 0.0000264 fg: 0.0000246 cached: 0.00000106 ( cpu=0.0000264 (3s 500ms) cpu:fg=0.0000246 (885ms) cpu:cached=0.00000106 (38ms) ) 
+    UID 1040: 0.0000193 ( cpu=0.0000193 (2s 554ms) ) 
+    UID u0a161: 0.0000186 fg: 0.0000185 cached: 0.00000003 ( cpu=0.0000186 (2s 3ms) cpu:fg=0.0000185 (667ms) cpu:cached=0.00000003 (1ms) ) 
+    UID u0a98: 0.0000144 cached: 0.00000658 ( cpu=0.0000144 (2s 440ms) cpu:cached=0.00000658 (237ms) ) 
+    UID u0a146: 0.0000131 cached: 0.00000653 ( cpu=0.0000131 (1s 440ms) cpu:cached=0.00000653 (235ms) ) 
+    UID 1017: 0.00000931 ( cpu=0.00000931 (994ms) ) 
+    UID 1067: 0.00000883 ( cpu=0.00000883 (1s 954ms) ) 
+    UID 1068: 0.00000583 fg: 0.00000583 ( cpu=0.00000583 (791ms) cpu:fg=0.00000583 (210ms) ) 
+    UID u0a81: 0.00000581 cached: 0.00000228 ( cpu=0.00000581 (1s 318ms) cpu:cached=0.00000228 (82ms) ) 
+    UID u0a100: 0.00000572 cached: 0.00000381 ( cpu=0.00000572 (1s 305ms) cpu:cached=0.00000381 (137ms) ) 
+    UID u0a79: 0.00000539 fg: 0.00000075 cached: 0.00000358 ( cpu=0.00000539 (696ms) cpu:fg=0.00000075 (27ms) cpu:cached=0.00000358 (129ms) ) 
+    UID 1020: 0.00000467 ( cpu=0.00000467 (601ms) ) 
+    UID u0a74: 0.00000447 cached: 0.00000111 ( cpu=0.00000447 (886ms) cpu:cached=0.00000111 (40ms) ) 
+    UID u0a124: 0.00000428 cached: 0.00000356 ( cpu=0.00000428 (3s 320ms) cpu:cached=0.00000356 (128ms) ) 
+    UID u0a92: 0.00000367 cached: 0.00000142 ( cpu=0.00000367 (1s 117ms) cpu:cached=0.00000142 (51ms) ) 
+    UID 1019: 0.00000344 ( cpu=0.00000344 (519ms) ) 
+    UID u0a103: 0.00000256 cached: 0.00000075 ( cpu=0.00000256 (400ms) cpu:cached=0.00000075 (27ms) ) 
+    UID u0a94: 0.00000206 cached: 0.00000083 ( cpu=0.00000206 (627ms) cpu:cached=0.00000083 (30ms) ) 
+    UID 1046: 0.00000119 ( cpu=0.00000119 (783ms) ) 
+    UID 1072: 0.00000100 ( cpu=0.00000100 (142ms) ) 
+    UID u0a144: 0.00000100 cached: 0.00000089 ( cpu=0.00000100 (377ms) cpu:cached=0.00000089 (32ms) ) 
+    UID 1076: 0.00000067 ( cpu=0.00000067 (45ms) ) 
+    UID 1053: 0.00000047 ( cpu=0.00000047 (467ms) ) 
+    UID 1058: 0.00000042 ( cpu=0.00000042 (53ms) ) 
+    UID u0a64: 0.00000033 cached: 0.00000011 ( cpu=0.00000033 (366ms) cpu:cached=0.00000011 (4ms) ) 
+    UID u0a73: 0.00000025 cached: 0.00000008 ( cpu=0.00000025 (108ms) cpu:cached=0.00000008 (3ms) ) 
+    UID u0a128: 0.00000008 cached: 0.00000003 ( cpu=0.00000008 (553ms) cpu:cached=0.00000003 (1ms) ) 
+    UID u0a139: 0.00000006 cached: 0.00000003 ( cpu=0.00000006 (264ms) cpu:cached=0.00000003 (1ms) ) 
+
+  Per-app mobile ms per packet:
+    Uid u0a108: 370 (24 packets over 8s 874ms) 2x
+    Uid 1073: 13.5 (1098 packets over 14s 790ms) 14x
+    TOTAL TIME: 23s 664ms (0.0%)
+
+  All kernel wake locks:
+  Kernel Wake lock emulator_wake_lock: 18s 955ms (0 times) realtime
+  Kernel Wake lock PowerManagerService.Display: 18s 542ms (1 times) realtime
+  Kernel Wake lock PowerManager.SuspendLockout: 18s 524ms (0 times) realtime
+  Kernel Wake lock PowerManagerService.Booting: 18s 457ms (0 times) realtime
+  Kernel Wake lock PowerManagerService.WakeLocks: 467ms (0 times) realtime
+  Kernel Wake lock ApmOutput: 209ms (218 times) realtime
+  Kernel Wake lock event12: 29ms (2 times) realtime
+  Kernel Wake lock : 15ms (2 times) realtime
+  Kernel Wake lock NETLINK: 6ms (79 times) realtime
+
+  All partial wake locks:
+  Wake lock 1001 *telephony-radio*: 27ms (0 times) max=498 actual=498 realtime
+  Wake lock 1002 *alarm*: 27ms (0 times) max=498 actual=498 realtime
+  Wake lock u0a102 *job*/com.google.android.as/com.google.android.apps.miphone.aiai.common.superpacks.impl.AiAiPersistentDownloadJobService#8: 27ms (0 times) max=498 actual=498 realtime
+  Wake lock u0a102 *job*/com.google.android.as/com.google.android.apps.miphone.aiai.common.superpacks.impl.AiAiPersistentDownloadJobService#0: 27ms (0 times) max=498 actual=498 realtime
+  Wake lock u0a102 *job*/com.google.android.as/com.google.android.apps.miphone.aiai.common.superpacks.impl.PeriodicCleanupService#272538963: 27ms (0 times) max=498 actual=498 realtime
+  Wake lock u0a104 *job*/com.android.vending/com.google.android.finsky.instantapps.PhenotypeUpdateService#174406261: 27ms (0 times) max=498 actual=498 realtime
+  Wake lock u0a107 BuglePhoneApplicationBase#fetchDarkMode -> Application creation -> Application.onCreate -> StartupHandlerImpl#onApplicationCreated -> StartupHandlerImpl#onApplicationCreatedInternal -> PhoneAsyncAppCreateStartupTask -> DatabaseHelperBasic#getDatabaseWrapperForAnyThread create -> DatabaseHelperBasic#doInitialization -> DatabaseHelperBasic#getOrCreateDatabase -> DatabaseHelperBasic#createSchema -> forward_sync_batch -> WorkQueueImpl#queueWorkItemAndReturnFuture -> DatabasePlugin#executeInTransaction1 -> executeInTransaction running transactionBlock -> forward_sync_batch: 27ms (0 times) max=498 actual=498 realtime
+  Wake lock u0a107 BuglePhoneApplicationBase#fetchDarkMode -> Application creation -> Application.onCreate -> Startup Listeners -> AfterPackageReplaced -> StartupAfterPackageReplaced: 27ms (0 times) max=498 actual=498 realtime
+  Wake lock u0a107 *job*/com.google.android.apps.messaging/androidx.work.impl.background.systemjob.SystemJobService#1000: 27ms (0 times) max=498 actual=498 realtime
+  Wake lock u0a108 Checkin Service: 27ms (0 times) max=498 actual=498 realtime
+  Wake lock u0a108 IntentOp:.common.broadcast.BackgroundBroadcastReceiverSupport$PersistentReceiverIntentOperation: 27ms (0 times) max=498 actual=498 realtime
+  Wake lock u0a108 IntentOp:.chimera.container.InitConfigOperation: 27ms (0 times) max=498 actual=498 realtime
+  Wake lock u0a108 Icing: 27ms (0 times) max=498 actual=498 realtime
+  Wake lock u0a108 wake:com.google.android.gms/.chimera.GmsIntentOperationService - 913: 27ms (0 times) max=498 actual=498 realtime
+  Wake lock u0a110 Icing: 27ms (0 times) max=498 actual=498 realtime
+  Wake lock u0a110 *job*/com.google.android.googlequicksearchbox/com.google.android.apps.gsa.tasks.BackgroundTasksJobService#-151: 27ms (0 times) max=498 actual=498 realtime
+  Wake lock u0a150 *job*/com.google.android.providers.media.module/com.android.providers.media.MediaService#-300: 27ms (0 times) max=498 actual=498 realtime
+  Wake lock u0a102 *job*/com.google.android.as/androidx.work.impl.background.systemjob.SystemJobService#4: 16ms (1 times) max=299 actual=299 realtime
+  Wake lock u0a108 IntentOp:com.google.android.gms/.chimera.GmsIntentOperationService: 13ms (1 times) max=255 actual=255 realtime
+  Wake lock 1000 ActivityManager-Sleep: 10ms (1 times) max=189 actual=189 realtime
+  Wake lock u0a108 IntentOp:.reminders.notification.RefreshNotificationsIntentOperation: 2ms (1 times) max=37 actual=37 realtime
+  Wake lock 1000 PhoneWindowManager.mPowerKeyWakeLock: 1ms (1 times) max=13 actual=13 realtime
+
+  Resource Power Manager Stats
+
+  CPU freqs: 1 2 1 2 1 2 1 2
+
+  0:
+    Mobile network: 0B received, 6.86KB sent (packets 0 received, 87 sent)
+    Mobile radio active: 0ms (0.0%) 5x @ 0 mspp
+    Wake lock *vibrator* realtime
+    Vibrator: 150ms realtime (1 times)
+    Total cpu time: u=17s 144ms s=8m 28s 927ms 
+    Total cpu time per freq: 280854 52786 18331 33903 19559 36241 18828 35667
+    Total screen-off cpu time per freq: 419 455 173 505 188 388 203 483
+    Proc kworker/u8:3-kverityd:
+      CPU: 0ms usr + 1s 600ms krn ; 0ms fg
+    Proc kworker/u8:4-kverityd:
+      CPU: 0ms usr + 1s 870ms krn ; 0ms fg
+    Proc kworker/3:1H-kblockd:
+      CPU: 0ms usr + 1s 30ms krn ; 0ms fg
+    Proc kworker/0:2-events:
+      CPU: 0ms usr + 13s 780ms krn ; 0ms fg
+    Proc kworker/1:2-virtio_vsock:
+      CPU: 0ms usr + 1s 600ms krn ; 0ms fg
+    Proc kworker/u8:3-events_unbound:
+      CPU: 0ms usr + 1s 0ms krn ; 0ms fg
+    Proc kworker/2:1H-kblockd:
+      CPU: 0ms usr + 990ms krn ; 0ms fg
+    Proc kworker/u8:5-kverityd:
+      CPU: 0ms usr + 1s 20ms krn ; 0ms fg
+    Proc storaged:
+      CPU: 1s 150ms usr + 1s 40ms krn ; 0ms fg
+    Proc kworker/1:1H-kblockd:
+      CPU: 0ms usr + 1s 30ms krn ; 0ms fg
+    Proc kworker/0:1H-kblockd:
+      CPU: 0ms usr + 4s 570ms krn ; 0ms fg
+    Proc migration/3:
+      CPU: 0ms usr + 150ms krn ; 0ms fg
+    Proc migration/2:
+      CPU: 0ms usr + 300ms krn ; 0ms fg
+    Proc migration/1:
+      CPU: 0ms usr + 190ms krn ; 0ms fg
+    Proc migration/0:
+      CPU: 0ms usr + 220ms krn ; 0ms fg
+    Proc ksoftirqd/3:
+      CPU: 10ms usr + 1s 500ms krn ; 0ms fg
+    Proc ksoftirqd/2:
+      CPU: 0ms usr + 1s 610ms krn ; 0ms fg
+    Proc ksoftirqd/1:
+      CPU: 0ms usr + 1s 560ms krn ; 0ms fg
+    Proc ksoftirqd/0:
+      CPU: 0ms usr + 18s 520ms krn ; 0ms fg
+    Proc kworker/u9:4-blk_crypto_wq:
+      CPU: 0ms usr + 1s 330ms krn ; 0ms fg
+    Proc kworker/2:2-virtio_vsock:
+      CPU: 0ms usr + 660ms krn ; 0ms fg
+    Proc kworker/u8:1-writeback:
+      CPU: 0ms usr + 1s 90ms krn ; 0ms fg
+    Proc kworker/3:2-events:
+      CPU: 0ms usr + 1s 320ms krn ; 0ms fg
+    Proc kworker/1:0-mm_percpu_wq:
+      CPU: 0ms usr + 600ms krn ; 0ms fg
+    Proc zygote64:
+      CPU: 450ms usr + 14s 970ms krn ; 0ms fg
+    Proc kworker/u9:2-hci0:
+      CPU: 0ms usr + 410ms krn ; 0ms fg
+    Proc kworker/u9:1-hci0:
+      CPU: 0ms usr + 330ms krn ; 0ms fg
+    Proc kworker/u8:3-ext4-rsv-conversion:
+      CPU: 0ms usr + 510ms krn ; 0ms fg
+    Proc kworker/1:1-mm_percpu_wq:
+      CPU: 0ms usr + 290ms krn ; 0ms fg
+    Proc kworker/2:0-mm_percpu_wq:
+      CPU: 0ms usr + 180ms krn ; 0ms fg
+    Proc installd:
+      CPU: 550ms usr + 1s 630ms krn ; 0ms fg
+    Proc kthreadd:
+      CPU: 0ms usr + 70ms krn ; 0ms fg
+    Proc qemu-props:
+      CPU: 260ms usr + 210ms krn ; 0ms fg
+    Proc kworker/2:1-mm_percpu_wq:
+      CPU: 0ms usr + 430ms krn ; 0ms fg
+    Proc kworker/3:0-mm_percpu_wq:
+      CPU: 40ms usr + 0ms krn ; 0ms fg
+    Proc jbd2/dm-32-8:
+      CPU: 0ms usr + 19s 560ms krn ; 0ms fg
+    Proc hwrng:
+      CPU: 0ms usr + 30ms krn ; 0ms fg
+    Proc apexd:
+      CPU: 100ms usr + 140ms krn ; 0ms fg
+    Proc kworker/0:1-events:
+      CPU: 0ms usr + 10s 620ms krn ; 0ms fg
+    Proc kworker/u8:0-ext4-rsv-conversion:
+      CPU: 0ms usr + 550ms krn ; 0ms fg
+    Proc rcu_preempt:
+      CPU: 40ms usr + 16s 190ms krn ; 0ms fg
+    Proc vold:
+      CPU: 860ms usr + 290ms krn ; 0ms fg
+    Proc netd:
+      CPU: 4s 520ms usr + 7s 520ms krn ; 0ms fg
+    Proc init:
+      CPU: 3s 20ms usr + 2s 860ms krn ; 0ms fg
+    Proc kworker/1:1-events:
+      CPU: 0ms usr + 1s 270ms krn ; 0ms fg
+    Proc kworker/3:1-rcu_gp:
+      CPU: 0ms usr + 480ms krn ; 0ms fg
+    Proc kworker/u9:3-blk_crypto_wq:
+      CPU: 0ms usr + 640ms krn ; 0ms fg
+    Proc rcu_exp_gp_kthr:
+      CPU: 10ms usr + 170ms krn ; 0ms fg
+    Proc kworker/u9:0-fscrypt_read_queue:
+      CPU: 10ms usr + 430ms krn ; 0ms fg
+    Proc kworker/2:2-mm_percpu_wq:
+      CPU: 0ms usr + 110ms krn ; 0ms fg
+    Proc kworker/3:1-mm_percpu_wq:
+      CPU: 0ms usr + 1s 860ms krn ; 0ms fg
+    Proc kworker/2:1-events:
+      CPU: 0ms usr + 890ms krn ; 0ms fg
+    Proc kswapd0:
+      CPU: 0ms usr + 35s 860ms krn ; 0ms fg
+    Proc kworker/u9:0-blk_crypto_wq:
+      CPU: 0ms usr + 1s 420ms krn ; 0ms fg
+    Proc ueventd:
+      CPU: 1s 690ms usr + 330ms krn ; 0ms fg
+    Proc kworker/u9:1-fscrypt_read_queue:
+      CPU: 0ms usr + 490ms krn ; 0ms fg
+    Proc kworker/2:1-dm_bufio_cache:
+      CPU: 0ms usr + 310ms krn ; 0ms fg
+    Proc kworker/u8:5-phy1:
+      CPU: 0ms usr + 1s 280ms krn ; 0ms fg
+    Proc kworker/u8:4-phy1:
+      CPU: 0ms usr + 1s 10ms krn ; 0ms fg
+    Proc iptables-restore:
+      CPU: 330ms usr + 300ms krn ; 0ms fg
+    Proc kworker/u8:2-phy1:
+      CPU: 0ms usr + 1s 440ms krn ; 0ms fg
+    Proc kworker/u8:1-phy1:
+      CPU: 0ms usr + 950ms krn ; 0ms fg
+    Proc kworker/2:0-events_power_efficient:
+      CPU: 0ms usr + 2s 920ms krn ; 0ms fg
+    Proc kworker/u8:0-phy1:
+      CPU: 0ms usr + 510ms krn ; 0ms fg
+    Proc kauditd:
+      CPU: 10ms usr + 0ms krn ; 0ms fg
+    Proc rcub/0:
+      CPU: 0ms usr + 60ms krn ; 0ms fg
+    Proc kcompactd0:
+      CPU: 10ms usr + 29s 910ms krn ; 0ms fg
+    Proc kworker/u8:0-events_unbound:
+      CPU: 0ms usr + 6s 120ms krn ; 0ms fg
+    Proc kworker/0:0-virtio_vsock:
+      CPU: 0ms usr + 36s 300ms krn ; 0ms fg
+    Proc psimon:
+      CPU: 10ms usr + 340ms krn ; 0ms fg
+    Proc kworker/u9:2-fscrypt_read_queue:
+      CPU: 0ms usr + 90ms krn ; 0ms fg
+    Proc ip6tables-restore:
+      CPU: 180ms usr + 230ms krn ; 0ms fg
+    Proc dhcpclient:
+      CPU: 1s 660ms usr + 11s 750ms krn ; 0ms fg
+    Proc kworker/u8:1-events_unbound:
+      CPU: 0ms usr + 5s 330ms krn ; 0ms fg
+    Proc kworker/0:1-virtio_vsock:
+      CPU: 0ms usr + 1m 1s 550ms krn ; 0ms fg
+    Proc kworker/u9:3-fscrypt_read_queue:
+      CPU: 0ms usr + 110ms krn ; 0ms fg
+    Proc kworker/u8:0-kverityd:
+      CPU: 0ms usr + 2s 720ms krn ; 0ms fg
+    Proc kworker/0:0-events:
+      CPU: 0ms usr + 20s 340ms krn ; 0ms fg
+    Proc kworker/u9:2-blk_crypto_wq:
+      CPU: 0ms usr + 340ms krn ; 0ms fg
+    Proc kworker/u8:1-kverityd:
+      CPU: 0ms usr + 2s 230ms krn ; 0ms fg
+    Proc sugov:3:
+      CPU: 10ms usr + 3s 530ms krn ; 0ms fg
+    Proc sugov:2:
+      CPU: 0ms usr + 3s 830ms krn ; 0ms fg
+    Proc sugov:1:
+      CPU: 0ms usr + 4s 50ms krn ; 0ms fg
+    Proc sugov:0:
+      CPU: 0ms usr + 2s 150ms krn ; 0ms fg
+    Proc kworker/0:0-kdmflush:
+      CPU: 0ms usr + 1s 820ms krn ; 0ms fg
+    Proc kworker/u8:2-kverityd:
+      CPU: 0ms usr + 1s 210ms krn ; 0ms fg
+    Proc kworker/0:2-virtio_vsock:
+      CPU: 0ms usr + 55s 390ms krn ; 0ms fg
+    Proc kworker/u8:2-events_unbound:
+      CPU: 0ms usr + 6s 970ms krn ; 0ms fg
+  1000:
+    Wifi Running: 0ms (0.0%)
+    Full Wifi Lock: 0ms (0.0%)
+    Wifi Scan (blamed): 3s 755ms (0.0%) 1x
+    Wifi Scan (actual): 3s 755ms (0.0%) 1x
+    Background Wifi Scan: 3s 755ms (0.0%) 1x
+    User activity: 7 other, 14 button, 163 touch
+    Wake lock ActivityManager-Sleep: 10ms partial (1 times) max=189 actual=189, 189ms background partial (1 times) max=189 realtime
+    Wake lock WifiSuspend realtime
+    Wake lock WiredAccessoryManager realtime
+    Wake lock *alarm* realtime
+    Wake lock time_detector realtime
+    Wake lock PhoneWindowManager.mPowerKeyWakeLock: 1ms partial (1 times) max=13 actual=13, 13ms background partial (1 times) max=13 realtime
+    Wake lock AudioMix realtime
+    Wake lock *launch* realtime
+    Wake lock NetworkStats realtime
+    Wake lock Icing realtime
+    Wake lock *telephony-radio* realtime
+    Wake lock NtpTimeHelper realtime
+    Wake lock NetworkTimeUpdateService realtime
+    Wake lock WindowManager/displayId:0: 25s 724ms full (2 times) realtime
+    Wake lock SyncLoopWakeLock realtime
+    Wake lock SCREEN_FROZEN realtime
+    Wake lock *job*/android/com.android.server.notification.NotificationHistoryJobService#237039804 realtime
+    TOTAL wake: 25s 724ms full, 11ms blamed partial, 202ms actual partial, 202ms actual background partial realtime
+    Job android/com.android.server.notification.NotificationHistoryJobService: 14s 17ms realtime (26 times), 14s 17ms background (26 times)
+    Job Completions android/com.android.server.notification.NotificationHistoryJobService: successful_finish(26x)
+    Audio: 1s 14ms realtime (5 times)
+    Sensor 0: 8h 25m 48s 87ms blamed realtime, 8h 26m 6s 848ms realtime (3 times), 8h 26m 4s 203ms background (1 times)
+    Foreground activities: 2h 35m 22s 808ms realtime (6 times)
+    Foreground for: 21s 182ms 
+    Cached for: 458ms 
+    Total running: 21s 640ms 
+    Total cpu time: u=12m 47s 119ms s=11m 31s 967ms 
+    Total cpu time per freq: 141713 116660 171128 139038 163786 141860 171295 141457
+    Total screen-off cpu time per freq: 2063 3144 1636 3783 1327 4485 1790 3362
+    Cpu times per freq at state Foreground: 2157 3931 1751 4636 1397 5232 1906 4034
+   Screen-off cpu times per freq at state Foreground: 1976 2943 1586 3590 1261 4330 1705 3269
+    Cpu times per freq at state Cached: 0 245 0 281 11 195 0 343
+    Proc gatekeeperd:
+      CPU: 10ms usr + 10ms krn ; 0ms fg
+    Proc android.hardware.neuralnetworks@1.3-service-sample-limited:
+      CPU: 20ms usr + 10ms krn ; 0ms fg
+    Proc idmap2d:
+      CPU: 170ms usr + 250ms krn ; 0ms fg
+    Proc android.hardware.camera.provider@2.7-service-google:
+      CPU: 30ms usr + 20ms krn ; 0ms fg
+    Proc servicemanager:
+      CPU: 4s 550ms usr + 2s 900ms krn ; 0ms fg
+    Proc com.android.settings:
+      CPU: 5s 120ms usr + 2s 940ms krn ; 11s 680ms fg
+      27 starts
+    Proc android.hardware.biometrics.fingerprint@2.1-service:
+      CPU: 330ms usr + 590ms krn ; 0ms fg
+    Proc android.system.suspend@1.0-service:
+      CPU: 1s 10ms usr + 3s 440ms krn ; 0ms fg
+    Proc com.android.emulator.multidisplay:
+      CPU: 340ms usr + 120ms krn ; 0ms fg
+      2 starts
+    Proc android.hardware.usb@1.0-service:
+      CPU: 110ms usr + 140ms krn ; 0ms fg
+    Proc android.hardware.neuralnetworks@1.3-service-sample-all:
+      CPU: 20ms usr + 20ms krn ; 0ms fg
+    Proc com.android.localtransport:
+      CPU: 0ms usr + 0ms krn ; 0ms fg
+      2 starts
+    Proc com.android.dynsystem:dynsystem:
+      CPU: 20ms usr + 0ms krn ; 0ms fg
+      2 starts
+    Proc com.android.keychain:
+      CPU: 170ms usr + 60ms krn ; 0ms fg
+      5 starts
+    Proc android.hardware.biometrics.face@1.0-service.example:
+      CPU: 0ms usr + 10ms krn ; 0ms fg
+    Proc surfaceflinger:
+      CPU: 35s 60ms usr + 52s 280ms krn ; 0ms fg
+    Proc android.hardware.thermal@2.0-service.mock:
+      CPU: 10ms usr + 10ms krn ; 0ms fg
+    Proc android.hardware.graphics.composer@2.4-service:
+      CPU: 27s 890ms usr + 1m 43s 570ms krn ; 0ms fg
+    Proc android.hardware.gatekeeper@1.0-service.software:
+      CPU: 10ms usr + 0ms krn ; 0ms fg
+    Proc system:
+      CPU: 10m 17s 30ms usr + 6m 15s 20ms krn ; 0ms fg
+    Proc android.hardware.health@2.1-service:
+      CPU: 760ms usr + 400ms krn ; 0ms fg
+    Proc android.hardware.sensors@2.1-service.multihal:
+      CPU: 1m 10s 140ms usr + 2m 24s 10ms krn ; 0ms fg
+    Proc hwservicemanager:
+      CPU: 1s 720ms usr + 720ms krn ; 0ms fg
+    Proc android.hardware.power.stats@1.0-service.mock:
+      CPU: 240ms usr + 140ms krn ; 0ms fg
+    Proc WebViewLoader-arm64-v8a:
+      CPU: 0ms usr + 0ms krn ; 0ms fg
+      2 starts
+    Proc android.hardware.graphics.allocator@3.0-service:
+      CPU: 320ms usr + 1s 80ms krn ; 0ms fg
+    Proc com.android.dynsystem:
+
+Pergunta 8 : 
+Para listar todos os serviços existentes no telemóvel executei este comando :  dumpsys | grep "DUMP OF SERVICE"  
+
+DUMP OF SERVICE dreams:
+DUMP OF SERVICE drm.drmManager:
+DUMP OF SERVICE dropbox:
+DUMP OF SERVICE dynamic_system:
+DUMP OF SERVICE emergency_affordance:
+DUMP OF SERVICE external_vibrator_service:
+DUMP OF SERVICE file_integrity:
+DUMP OF SERVICE fingerprint:
+DUMP OF SERVICE font:
+DUMP OF SERVICE game:
+DUMP OF SERVICE gfxinfo:
+DUMP OF SERVICE gpu:
+
+Este comando: service call phone 1 s16 “123456789” originou o seguinte : Result: Parcel(00000000    '....')
+
+Pergunta 9 : 
+Quando executamos o seguinte comando: 
+am start -a android.intent.action.CALL -d tel:123456789
+
+Inicia uma chamada para o número 123456789

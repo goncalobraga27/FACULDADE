@@ -1,0 +1,220 @@
+{
+  "id": "83f13d8a-f7d0-4a6d-90d5-0fc1412692db",
+  "version": "2.0",
+  "name": "Calculator Test",
+  "url": "https://www.calculator.net/",
+  "tests": [{
+    "id": "7321873e-157a-413e-a40c-989448b07258",
+    "name": "1a)",
+    "commands": [{
+      "id": "89cc828f-b3cd-49e7-8da0-04e98d93f732",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.calculator.net/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "35d95cf1-85fd-431a-a85c-4b23c68c1966",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "769x691",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4dd9054a-6429-4c93-a2eb-5480a4ff8cc9",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(1) > .scifunc:nth-child(1)",
+      "targets": [
+        ["css=div:nth-child(1) > .scifunc:nth-child(1)", "css:finder"],
+        ["xpath=//span[@onclick=\"r('sin')\"]", "xpath:attributes"],
+        ["xpath=//div[@id='homefunbtn']/div/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'sin')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5fb63abf-133d-4bc9-b79d-3cd78e397aa0",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > .scifunc:nth-child(1) > sup",
+      "targets": [
+        ["css=div:nth-child(2) > .scifunc:nth-child(1) > sup", "css:finder"],
+        ["xpath=//div[@id='homefunbtn']/div[2]/span/sup", "xpath:idRelative"],
+        ["xpath=//sup", "xpath:position"],
+        ["xpath=//sup[contains(.,'-1')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8d2219a-523b-4ce5-88a6-5fa6b3079287",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(1) > .scinm:nth-child(1)",
+      "targets": [
+        ["css=div:nth-child(1) > .scinm:nth-child(1)", "css:finder"],
+        ["xpath=//span[@onclick='r(7)']", "xpath:attributes"],
+        ["xpath=//table[@id='sciout']/tbody/tr[2]/td[2]/div/div/span", "xpath:idRelative"],
+        ["xpath=//td[2]/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'7')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ca712c2-7c9d-4486-8e0e-652b6df8b68f",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(1) > .scinm:nth-child(2)",
+      "targets": [
+        ["css=div:nth-child(1) > .scinm:nth-child(2)", "css:finder"],
+        ["xpath=//span[@onclick='r(8)']", "xpath:attributes"],
+        ["xpath=//table[@id='sciout']/tbody/tr[2]/td[2]/div/div/span[2]", "xpath:idRelative"],
+        ["xpath=//td[2]/div/div/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'8')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f29257a-6530-4aec-8650-df7d0c69dcf6",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(2) > .scinm:nth-child(1)",
+      "targets": [
+        ["css=div:nth-child(2) > .scinm:nth-child(1)", "css:finder"],
+        ["xpath=//span[@onclick='r(4)']", "xpath:attributes"],
+        ["xpath=//table[@id='sciout']/tbody/tr[2]/td[2]/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//td[2]/div/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'4')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1359a7bb-130c-4b1e-ba96-59c399f1d42b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=div:nth-child(2) > .scinm:nth-child(1)",
+      "targets": [
+        ["css=div:nth-child(2) > .scinm:nth-child(1)", "css:finder"],
+        ["xpath=//span[@onclick='r(4)']", "xpath:attributes"],
+        ["xpath=//table[@id='sciout']/tbody/tr[2]/td[2]/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//td[2]/div/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'4')]", "xpath:innerText"]
+      ],
+      "value": "4"
+    }, {
+      "id": "82c7e898-96fc-4399-bc4f-10be5200cfd1",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=div:nth-child(2) > .scifunc:nth-child(5)",
+      "targets": [
+        ["css=div:nth-child(2) > .scifunc:nth-child(5)", "css:finder"],
+        ["xpath=//span[@onclick=\"r('e')\"]", "xpath:attributes"],
+        ["xpath=//div[@id='homefunbtn']/div[2]/span[5]", "xpath:idRelative"],
+        ["xpath=//span[5]", "xpath:position"]
+      ],
+      "value": "e"
+    }]
+  }, {
+    "id": "cb800066-5d7a-4aaa-9023-bf0a3ea14549",
+    "name": "1b)",
+    "commands": [{
+      "id": "86be7712-c26d-4772-8af4-3463a4333f69",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.calculator.net/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ad55cd15-4768-43d4-a253-a738d91c4573",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "769x691",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3a3fda36-87b2-42d1-ab2b-d946911f9c3e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Random Number Generator",
+      "targets": [
+        ["linkText=Random Number Generator", "linkText"],
+        ["css=#hl3 > li:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Random Number Generator')]", "xpath:link"],
+        ["xpath=//ul[@id='hl3']/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/random-number-generator.html')]", "xpath:href"],
+        ["xpath=//div[3]/ul/li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Random Number Generator')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e5df60c6-3b29-4352-a314-85ed5c8d0a19",
+      "comment": "",
+      "command": "click",
+      "target": "name=supper",
+      "targets": [
+        ["name=supper", "name"],
+        ["css=form:nth-child(4) tr:nth-child(2) .inlonger:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='supper']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/form/table/tbody/tr/td/table/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b83d6892-a455-49b2-b9ec-f2d159cfed3c",
+      "comment": "",
+      "command": "type",
+      "target": "name=supper",
+      "targets": [
+        ["name=supper", "name"],
+        ["css=form:nth-child(4) tr:nth-child(2) .inlonger:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='supper']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/form/table/tbody/tr/td/table/tbody/tr[2]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]/input", "xpath:position"]
+      ],
+      "value": "10"
+    }, {
+      "id": "801f880e-9734-4fcc-ab49-872d3a7472f2",
+      "comment": "",
+      "command": "click",
+      "target": "name=x",
+      "targets": [
+        ["name=x", "name"],
+        ["css=tr:nth-child(3) input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='x']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/form/table/tbody/tr/td/table/tbody/tr[3]/td/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7eaf5c8f-1fbe-4bc5-8d2c-9f78fe73f3b9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.verybigtext",
+      "targets": [
+        ["css=.verybigtext", "css:finder"],
+        ["xpath=//div[@id='content']/p[2]", "xpath:idRelative"],
+        ["xpath=//p[2]", "xpath:position"],
+        ["xpath=//p[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd7b2c20-e8c3-4ab3-87c4-75198f00bc4d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.verybigtext",
+      "targets": [
+        ["css=.verybigtext", "css:finder"],
+        ["xpath=//div[@id='content']/p[2]", "xpath:idRelative"],
+        ["xpath=//p[2]", "xpath:position"],
+        ["xpath=//p[contains(.,'2')]", "xpath:innerText"]
+      ],
+      "value": "2"
+    }]
+  }],
+  "suites": [{
+    "id": "2bc9d8cd-eebe-400d-bd5f-49ee370de28e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["https://www.calculator.net/"],
+  "plugins": []
+}

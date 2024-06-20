@@ -1,0 +1,159 @@
+RESPOSTAS AO TESTE DE TDS:
+1. CROSS PLATAFORM DEVELOPMENT 
+
+1 - 
+a) F . A metodologia mobile-first é utilizada para desenvolver de uma forma inicial as aplicações para ambientes mobile, assim não existe uma oposição à abordagem de melhoramento progressivo, sendo que até existe uma complementaridade.
+
+b) V . Uma PWA, possui apenas um service worker responsável por desempenhar todo o trabalho da aplicação.
+
+c) V . Os service workers controlam apenas os elementos do seu scope. 
+
+d) F . Um service worker não tem de ser implementado obrigatoriamente dentro de um único ficheiro. 
+
+e) F. Uma das vantagens da nova arquitetura do React Native é a criação de um DOM local, isto é, cria o seu próprio DOM não utilizando o DOM da web page já criada. 
+
+f) V. O registo de um service worker ocorre quando ele existe, sendo que é interpretado com javascript e não deve ter erros, indicando que se encontra devidamente especificado 
+
+2 - 
+- Funcionais 
+- Classe 
+- Compilação ... compilador 
+- Hereditariedade/propriedades
+- Expo 
+
+3 - 
+O processo de inicialização de uma aplicação em React Native consiste no seguinte:
+- Inicializamos o lado nativo da aplicação, isto é, criamos o contentor RootView, inicializamos a interface Bridge, inicializamos os módulos nativos, expomos os módulos nativos e criamos as threads;
+
+- Javascript side, isto é, inicializamos a JavaScript virtual machine, criamos um contexto global para o JavaScript, dá-mos download do react native bundle, criação da bridge, criamos os modulos JavaScript do código nativo 
+
+- Inicialização da UI da aplicação 
+
+2. ANDROID NATIVE DEVELOPMENT
+1 - 
+a) V. O processo de compilação de uma aplicação, para chegar ao pacote final passa por diversos processos, tal como por exemplo, a verificação de erros e a assinatura do pacote da aplicação 
+
+b) F. As atividades são diferentes dos fragmentos no Android, pois as atividades podem possuir diversos fragmentos dentro da atividade e não vice versa.
+
+c) F. A definição está correta, mas não é UnicastReceiver, mas sim BroadCastReceiver
+
+d) V. O content resolver oferece uma interface consiste para manipulação de dados.
+
+2 - 
+O método onStart é utilizado quando é dado o start/início para uma determinada atividade. 
+O método onResume é utilizado quando a atividade se encontra iniciada e é solicitada que esta execute. 
+
+Assim o onStart acontece sempre antes do onResume, sendo que o onStart trata da inicialização de recursos para o utilizador que não precisa da ação do mesmo, enquanto que o onResume a aplicação já pode ser iterativa e precisa da ação do user.
+
+3. SOFTWARE DESIGNING PATERNS/PRINCIPALS
+
+1 -
+- singleton
+- adapter
+- abstration 
+- facade 
+- composite 
+
+2 -
+
+a) F. O princípio de Responsabilidade Única, afirma que cada classe tem apenas que desempenhar uma única função/responsabilidade no sistema desenvolvido.
+
+b) V. O princípio de segregação de interface, indica que os utilizadores não tem de estar dependentes de algo que eles não utilizem.
+
+c) F. O princípio de Dependency Injection defende que as dependências de um objeto devem ser passadas de três maneiras distintas ao mesmo, sendo o seu construtor uma delas 
+
+d) F. O encapsulamento restringe a duplicação de código, na prog. Orientada aos objetos 
+
+e) V. 
+
+f) V. O encapsulamento permite ter polimorfismo, o que nos permite tratar um objeto como uma super classe ou uma interface comum 
+
+3 - 
+
+A modularidade consiste na separação de diferentes conceitos de um problema, em módulos, fazendo com que estes, fiquem delimitados a um módulo. Este abordagem é melhor a nível de resolução de problema, pois trabalhamos com módulos e não com o programa todo.
+
+O encapsulamento, consiste em tornar estanque, um determinado objeto ao seu exterior. Isto é, os seus dados e os seus comportamentos não podem ser alterados por outros objetos existentes.  
+
+Assim, as diferenças entre a modularidade e o encapsulamento são:
+
+1º - A modularidade separa por módulos os conceitos do problema 
+
+2º - O encapsulamento torna um determinado objeto estanque ao exterior, isto é, apenas pudemos aceder ao método definidos pelo mesmo, sem alterarmos dados nem comportamentos. 
+
+4. INTRODUCTION TO WEB DEVELOPMENT
+
+1 -
+a) F. No semantic HTML o uso da div deve ser moderado, assim não é deveras importante 
+
+b) F. O javaScript possui um conjunto de variáveis globais possíveis de serem usadas e declaradas no código 
+
+c) V. 	
+
+d) V. Os arrays de JS podem sofrem alterações, logo são dinâmicos 
+
+e) V. 
+
+2 -
+<!DOCTYPE html>
+<html>
+    <body>
+        <header> 
+            <h1> FC PORCO </h1> 
+        </header>
+        <nav> 
+            <a href=".pt"> clica-me luis andre </a>
+            <a href=".pt"> clica-me pintinho </a>
+        </nav>
+        <aside>
+            Clube pequenino
+        </aside>
+        <section>
+            <ul>
+                <li> maxi pereira </li>
+                <li> otamendi </li>
+                <li> futre ganda homem </li>
+                <li> cesar peixoto a tua mulher é boa pessoa </li>
+                <li> jubas </li>
+                <li> clica-me luis andre </li>
+            </ul>
+        </section>
+
+
+        
+        <footer> TDS </footer>
+    </body>    
+
+</html>
+
+5. MODEL-DRIVEN MOBILE DEVELOPMENT
+
+1- 
+
+a) F. No modelo de desenvolvimento, os modelos são criados e mantido por arquitetos e engenheiros de software, mas podem ser feito com especialistas do domínio 
+
+b) V.
+
+c) V. 
+
+d) V. 
+
+e) V. 
+
+6. SOFTWARE MAINTENANCE, TESTING AND ANALYSIS
+
+1- 
+
+a) V. 
+
+b) F. Não possui a possibilidade de gravar testes possíveis de serem feitos 
+
+c) V. 
+
+d) V. 
+
+e) V. 
+
+f) F. O gitHub actions está disponível para todo o tipo de repos 
+
+g) V.
+
